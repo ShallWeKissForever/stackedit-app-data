@@ -3,6 +3,8 @@
 
 > Written with [StackEdit中文版](https://stackedit.cn/).
 
+**学号154**
+
 群公告
 🎉同学们【第一周：以太坊101】课程已经更新！
 🚩课程学习链接：https://youtu.be/4IH90wMU7Ww
@@ -41,5 +43,5 @@
 🪧完成以上任务后需截图上传至TinTinLand Zealy社区方可获得积分
 🪧Zealy地址：https://zealy.io/cw/tintinland/questboard
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk3ODU2MjMxXX0=
+eyJoaXN0b3J5IjpbNDgwNTIzMjkwLDg5Nzg1NjIzMV19
 -->
