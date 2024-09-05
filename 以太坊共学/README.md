@@ -1,0 +1,45 @@
+
+
+
+> Written with [StackEdit中文版](https://stackedit.cn/).
+
+群公告
+🎉同学们【第一周：以太坊101】课程已经更新！
+🚩课程学习链接：https://youtu.be/4IH90wMU7Ww
+✏️第一课Task任务：https://wj.qq.com/s2/15288104/g375/
+✨学员手册：https://attractive-spade-1e3.notion.site/3c55c15d535c43f7a236183af40cf76b?pvs=4
+🏖「学号&个人积分查询」：https://www.notion.so/f24aaf7c1e614a9a9f1ceaf7af6d45dd?pvs=4
+⏰开营时间：9月5日（周四）晚上20:00
+🚇腾讯会议室地址：https://meeting.tencent.com/dm/R2a9FD8dJ2ad
+————————
+🏆福利
+1⃣️10月15日 24:00前完成4次task，瓜分$150奖金池
+2⃣️11月1日  24:00前完成课程Bounty，瓜分$1350奖金池
+3⃣️完成当周task任务 参与🧧抽奖活动
+3⃣️完成4次task的同学可顺利毕业，获得由TinTinLand提供的电子毕业证书
+4⃣️提交项目demo的同学，获得由TinTinLand提供的电子优秀毕业证书
+5⃣️TinTinLand  Zealy 积分奖励
+🎁奖品内容包括奖金激励、工作机会内推、周边等等。
+————————
+⚠️强烈鼓励大家参与项目实践,根据要求完成Demo的同学将获得不菲的奖励，详情查看学员手册或咨询Adam班长
+⚠️【提示】大家关于【课程内容】有任何不懂的技术难题，可以随时提问，提问前务必请@老师及助教团队
+💪每晚8点-10点助教值班答疑每日会有不同的助教为大家答疑，帮助大家一起进步
+-------------------------
+岗位看板：https://attractive-spade-1e3.notion.site/37f6da2316a845fba6ff6f62f3c50289?v=e88aaffca0ee462db5e9daa53946059f&pvs=4
+
+💰积分获取:
+1⃣️填写课程报名表
+2⃣️参与9月5日晚8点开营仪式打卡
+3⃣️参与9月12日、9月19日、9月26日、10月10日晚8点学习打卡
+4⃣️参与10月15日 、10月16日、10月17日晚8点workshop打卡
+5⃣️提交task任务
+6⃣️提交项目demo
+7⃣️推荐他人报名
+8⃣️分享课程（不限于朋友圈、社群、Twitter等公开平台）
+————————
+🧨说明：
+🪧完成以上任务后需截图上传至TinTinLand Zealy社区方可获得积分
+🪧Zealy地址：https://zealy.io/cw/tintinland/questboard
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbODk3ODU2MjMxXX0=
+-->
