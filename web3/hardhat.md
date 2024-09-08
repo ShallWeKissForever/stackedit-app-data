@@ -21,8 +21,8 @@ npm config set registry=http://registry.npm. taobao. org
 运行单元测试`npx hardhat test (.\test\file) (--network localhost)`( 在节点上 )运行所有( 指定 )文件的单元测试
 测试和部署的时候都会自动编译
 
-
+开启
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTExNzY0MzgsLTE3ODM2NTYxNDYsMT
-A0ODU3MTUwN119
+eyJoaXN0b3J5IjpbLTE1Mjc0MzYyMSwtMTU5MTE3NjQzOCwtMT
+c4MzY1NjE0NiwxMDQ4NTcxNTA3XX0=
 -->
