@@ -39,11 +39,15 @@ npm config set registry=http://registry.npm. taobao. org
 const INFURA_API_KEY = vars.get("INFURA_API_KEY");
 ```
 对于可能不存在的变量，可以指定默认值作为第二个参数：
-```
+```javascript
 const salt = vars.get("DEPLOY_SALT", "12345");
 ```
+还可以使用`vars.has`检查变量是否存在：
+```javascript
+const accounts = vars.has("TEST_PK") ? [vars.get("TEST_PK")] : [];
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDE1MDQwMjMsLTM2NzUyMjAwLDEwOD
-k5NDQ0NDYsLTk2NjcxMDYzOSwtMTU5MTE3NjQzOCwtMTc4MzY1
-NjE0NiwxMDQ4NTcxNTA3XX0=
+eyJoaXN0b3J5IjpbLTg3NDgwNjI4NywtMzY3NTIyMDAsMTA4OT
+k0NDQ0NiwtOTY2NzEwNjM5LC0xNTkxMTc2NDM4LC0xNzgzNjU2
+MTQ2LDEwNDg1NzE1MDddfQ==
 -->
