@@ -14,7 +14,7 @@ npm config set registry=http://registry.npm. taobao. org
 
 在工程目录内的命令行输入`npm init`初始化工程
 安装hardhat：`npm i --save-dev hardhat`
-使用hardhat创建工程模板：`npx hardhat`，后续使用这个命令是帮助
+使用hardhat创建工程模板：`npx hardhat init`
 编译合约：`npx hardhat compile`
 开启节点：新打开一个终端`npx hardhat node`
 部署合约在节点中：`npx hardhat run .\folder\file (--network localhost)`运行在线程里( 节点 )中
@@ -49,7 +49,7 @@ const accounts = vars.has("TEST_PK") ? [vars.get("TEST_PK")] : [];
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUwNjAzNTk3LC0zNjc1MjIwMCwxMDg5OT
-Q0NDQ2LC05NjY3MTA2MzksLTE1OTExNzY0MzgsLTE3ODM2NTYx
-NDYsMTA0ODU3MTUwN119
+eyJoaXN0b3J5IjpbLTMwNjYxNzkxOSw2NTA2MDM1OTcsLTM2Nz
+UyMjAwLDEwODk5NDQ0NDYsLTk2NjcxMDYzOSwtMTU5MTE3NjQz
+OCwtMTc4MzY1NjE0NiwxMDQ4NTcxNTA3XX0=
 -->
