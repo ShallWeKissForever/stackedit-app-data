@@ -24,9 +24,12 @@ npm config set registry=http://registry.npm. taobao. org
 开启hardhat控制台与合约交互（不常用）`npx hardhat console (--network localhost)`
 
 配置变量
-可以将配置变量用于特定于用户的值或不应包含在代码存储库中的数据。
+可以将配置变量用于特定于用户的值或不应包含在代码存储库中的数据。这些变量是通过`vars`范围内的任务设置的，并且可以使用`vars`对象在配置中检索。
+
+配置变量以纯文本形式存储在磁盘上。避免将此功能用于通常不会保存在未加密文件中的数据。运行`npx hardhat vars path`以查找存储的文件位置。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4OTk0NDQ0NiwtOTY2NzEwNjM5LC0xNT
-kxMTc2NDM4LC0xNzgzNjU2MTQ2LDEwNDg1NzE1MDddfQ==
+eyJoaXN0b3J5IjpbLTM2NzUyMjAwLDEwODk5NDQ0NDYsLTk2Nj
+cxMDYzOSwtMTU5MTE3NjQzOCwtMTc4MzY1NjE0NiwxMDQ4NTcx
+NTA3XX0=
 -->
