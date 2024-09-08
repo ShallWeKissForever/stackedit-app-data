@@ -24,8 +24,9 @@ npm config set registry=http://registry.npm. taobao. org
 开启hardhat控制台与合约交互（不常用）`npx hardhat console (--network localhost)`
 
 配置变量
+可以将配置变量用于特定于用户的值或不应包含在代码存储库中的数据。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMzODcwMzA3LC05NjY3MTA2MzksLTE1OT
-ExNzY0MzgsLTE3ODM2NTYxNDYsMTA0ODU3MTUwN119
+eyJoaXN0b3J5IjpbMTA4OTk0NDQ0NiwtOTY2NzEwNjM5LC0xNT
+kxMTc2NDM4LC0xNzgzNjU2MTQ2LDEwNDg1NzE1MDddfQ==
 -->
