@@ -47,9 +47,10 @@ const salt = vars.get("DEPLOY_SALT", "12345");
 const accounts = vars.has("TEST_PK") ? [vars.get("TEST_PK")] : [];
 ```
 
-
+npx hardhat ignition deploy ./ignition/modules/Lock.js --network sepolia
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNjYxNzkxOSw2NTA2MDM1OTcsLTM2Nz
-UyMjAwLDEwODk5NDQ0NDYsLTk2NjcxMDYzOSwtMTU5MTE3NjQz
-OCwtMTc4MzY1NjE0NiwxMDQ4NTcxNTA3XX0=
+eyJoaXN0b3J5IjpbLTEwMTk2NTYwMzUsLTMwNjYxNzkxOSw2NT
+A2MDM1OTcsLTM2NzUyMjAwLDEwODk5NDQ0NDYsLTk2NjcxMDYz
+OSwtMTU5MTE3NjQzOCwtMTc4MzY1NjE0NiwxMDQ4NTcxNTA3XX
+0=
 -->
