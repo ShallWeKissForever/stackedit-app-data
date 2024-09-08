@@ -8,7 +8,7 @@
 **npm**（Node Package Manager）是Node.js的包管理工具和包管理器，最初由Isaac Z. Schlueter于2010年创建。npm是Node.js生态系统的重要组成部分，为Node.js开发者提供了一个强大的工具来管理和共享JavaScript代码包（packages）和模块（modules）。
 
 npm国内镜像源设置
-```
+```javascript
 npm config set registry=http://registry.npm. taobao. org
 ```
 
@@ -23,7 +23,7 @@ npm config set registry=http://registry.npm. taobao. org
 
 开启hardhat控制台与合约交互（不常用）`npx hardhat console (--network localhost)`
 
-配置变量
+## 配置变量
 可以将配置变量用于特定于用户的值或不应包含在代码存储库中的数据。这些变量是通过`vars`范围内的任务设置的，并且可以使用`vars`对象在配置中检索。
 
 - 配置变量以纯文本形式存储在磁盘上。避免将此功能用于通常不会保存在未加密文件中的数据。运行`npx hardhat vars path`以查找存储的文件位置。
@@ -32,8 +32,18 @@ npm config set registry=http://registry.npm. taobao. org
 `npx hardhat vars get`显示配置变量的值
 `npx hardhat vars list`打印存储在计算机上的所有配置变量
 `npx hardhat vars delete`删除配置变量
+
+### 在配置文件中使用变量
+可以在 Hardhat 配置文件中检索您之前存储的配置变量。使用`vars.get`方法获取它们：
+```javascript
+const INFURA_API_KEY = vars.get("INFURA_API_KEY");
+```
+对于可能不存在的变量，可以指定默认值作为第二个参数：
+```
+const salt = vars.get("DEPLOY_SALT", "12345");
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1OTEyODYxMiwtMzY3NTIyMDAsMTA4OT
-k0NDQ0NiwtOTY2NzEwNjM5LC0xNTkxMTc2NDM4LC0xNzgzNjU2
-MTQ2LDEwNDg1NzE1MDddfQ==
+eyJoaXN0b3J5IjpbLTE5MDE1MDQwMjMsLTM2NzUyMjAwLDEwOD
+k5NDQ0NDYsLTk2NjcxMDYzOSwtMTU5MTE3NjQzOCwtMTc4MzY1
+NjE0NiwxMDQ4NTcxNTA3XX0=
 -->
