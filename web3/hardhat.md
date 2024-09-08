@@ -26,10 +26,11 @@ npm config set registry=http://registry.npm. taobao. org
 配置变量
 可以将配置变量用于特定于用户的值或不应包含在代码存储库中的数据。这些变量是通过`vars`范围内的任务设置的，并且可以使用`vars`对象在配置中检索。
 
-配置变量以纯文本形式存储在磁盘上。避免将此功能用于通常不会保存在未加密文件中的数据。运行`npx hardhat vars path`以查找存储的文件位置。
+- 配置变量以纯文本形式存储在磁盘上。避免将此功能用于通常不会保存在未加密文件中的数据。运行`npx hardhat vars path`以查找存储的文件位置。
 
+`vars set` 为配置变量分配一个值，如果不存在则创建一个
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NzUyMjAwLDEwODk5NDQ0NDYsLTk2Nj
-cxMDYzOSwtMTU5MTE3NjQzOCwtMTc4MzY1NjE0NiwxMDQ4NTcx
-NTA3XX0=
+eyJoaXN0b3J5IjpbMTQyMDAyNjA3LC0zNjc1MjIwMCwxMDg5OT
+Q0NDQ2LC05NjY3MTA2MzksLTE1OTExNzY0MzgsLTE3ODM2NTYx
+NDYsMTA0ODU3MTUwN119
 -->
