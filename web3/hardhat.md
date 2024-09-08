@@ -28,9 +28,12 @@ npm config set registry=http://registry.npm. taobao. org
 
 - 配置变量以纯文本形式存储在磁盘上。避免将此功能用于通常不会保存在未加密文件中的数据。运行`npx hardhat vars path`以查找存储的文件位置。
 
-`vars set` 为配置变量分配一个值，如果不存在则创建一个
+`npx hardhat vars set` 为配置变量分配一个值，如果不存在则创建一个
+`npx hardhat vars get`显示配置变量的值
+`npx hardhat vars list`打印存储在计算机上的所有配置变量
+`npx hardhat vars delete`删除配置变量
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMDAyNjA3LC0zNjc1MjIwMCwxMDg5OT
-Q0NDQ2LC05NjY3MTA2MzksLTE1OTExNzY0MzgsLTE3ODM2NTYx
-NDYsMTA0ODU3MTUwN119
+eyJoaXN0b3J5IjpbLTk1OTEyODYxMiwtMzY3NTIyMDAsMTA4OT
+k0NDQ0NiwtOTY2NzEwNjM5LC0xNTkxMTc2NDM4LC0xNzgzNjU2
+MTQ2LDEwNDg1NzE1MDddfQ==
 -->
