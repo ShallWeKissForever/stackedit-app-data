@@ -16,10 +16,9 @@ npm config set registry=http://registry.npm. taobao. org
 安装hardhat：`npm i --save-dev hardhat`
 使用hardhat创建工程模板：`npx hardhat`，后续使用这个命令是帮助
 编译合约：`npx hardhat compile`
-部署合约：`npx hardhat run .\folder\file`运行在线程里
 开启节点：新打开一个终端`npx hardhat node`
-部署合约在节点中：`npx hardhat run .\folder\file --network localhost`运行在节点中
-运行单元测试`npx hardhat test (.\test\file) (--network localhost)`运行所有( 指定 )文件的单元测试
+部署合约在节点中：`npx hardhat run .\folder\file (--network localhost)`运行在线程里( 节点 )中
+运行单元测试`npx hardhat test (.\test\file) (--network localhost)`( 在节点上 )运行所有( 指定 )文件的单元测试
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEwODUxMjIyLDEwNDg1NzE1MDddfQ==
+eyJoaXN0b3J5IjpbLTIwNzgxMjAxNSwxMDQ4NTcxNTA3XX0=
 -->
