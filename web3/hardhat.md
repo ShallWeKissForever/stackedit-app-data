@@ -22,7 +22,9 @@ npm config set registry=http://registry.npm. taobao. org
 测试和部署的时候都会自动编译
 
 开启hardhat控制台与合约交互（不常用）`npx hardhat console (--network localhost)`
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NjcxMDYzOSwtMTU5MTE3NjQzOCwtMT
-c4MzY1NjE0NiwxMDQ4NTcxNTA3XX0=
+eyJoaXN0b3J5IjpbLTIwOTk3MjM1MzksLTk2NjcxMDYzOSwtMT
+U5MTE3NjQzOCwtMTc4MzY1NjE0NiwxMDQ4NTcxNTA3XX0=
 -->
