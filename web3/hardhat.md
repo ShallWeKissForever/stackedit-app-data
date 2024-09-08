@@ -19,6 +19,7 @@ npm config set registry=http://registry.npm. taobao. org
 开启节点：新打开一个终端`npx hardhat node`
 部署合约在节点中：`npx hardhat run .\folder\file (--network localhost)`运行在线程里( 节点 )中
 运行单元测试`npx hardhat test (.\test\file) (--network localhost)`( 在节点上 )运行所有( 指定 )文件的单元测试
+测试和部署的时候都会自动编译
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzgxMjAxNSwxMDQ4NTcxNTA3XX0=
+eyJoaXN0b3J5IjpbLTE3ODM2NTYxNDYsMTA0ODU3MTUwN119
 -->
