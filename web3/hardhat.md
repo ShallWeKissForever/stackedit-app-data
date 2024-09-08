@@ -14,9 +14,12 @@ npm config set registry=http://registry.npm. taobao. org
 
 在工程目录内的命令行输入`npm init`初始化工程
 安装hardhat`npm i --save-dev hardhat`
-使用hardhat创建工程模板`npx hardhat`, 后续使用这个命令是帮助
+使用hardhat创建工程模板`npx hardhat`，后续使用这个命令是帮助
 编译合约`npx hardhat compile`
-部署合约`npx hardhat run .\filefolder`
+部署合约`npx hardhat run .\folder\file`运行在线程里
+开启节点，新打开一个终端`npx hardhat node`
+部署合约`npx hardhat run .\folder\file`运行在线程里
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NTc1NjY3MSwxMDQ4NTcxNTA3XX0=
+eyJoaXN0b3J5IjpbLTM5OTk2ODI4MiwxMDQ4NTcxNTA3XX0=
 -->
