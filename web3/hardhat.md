@@ -46,8 +46,10 @@ const salt = vars.get("DEPLOY_SALT", "12345");
 ```javascript
 const accounts = vars.has("TEST_PK") ? [vars.get("TEST_PK")] : [];
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NDgwNjI4NywtMzY3NTIyMDAsMTA4OT
-k0NDQ0NiwtOTY2NzEwNjM5LC0xNTkxMTc2NDM4LC0xNzgzNjU2
-MTQ2LDEwNDg1NzE1MDddfQ==
+eyJoaXN0b3J5IjpbNjUwNjAzNTk3LC0zNjc1MjIwMCwxMDg5OT
+Q0NDQ2LC05NjY3MTA2MzksLTE1OTExNzY0MzgsLTE3ODM2NTYx
+NDYsMTA0ODU3MTUwN119
 -->
