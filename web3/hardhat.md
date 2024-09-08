@@ -7,7 +7,10 @@
 
 **npm**（Node Package Manager）是Node.js的包管理工具和包管理器，最初由Isaac Z. Schlueter于2010年创建。npm是Node.js生态系统的重要组成部分，为Node.js开发者提供了一个强大的工具来管理和共享JavaScript代码包（packages）和模块（modules）。
 
+npm国内镜像源设置
+```
 npm config set registry=http://registry.npm. taobao. org
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ0MDY4MDkzXX0=
+eyJoaXN0b3J5IjpbMTA0ODU3MTUwN119
 -->
