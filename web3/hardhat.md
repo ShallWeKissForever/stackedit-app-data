@@ -12,8 +12,9 @@ npm国内镜像源设置
 npm config set registry=http://registry.npm. taobao. org
 ```
 
-在工程目录内的命令行输入`npx init`
+在工程目录内的命令行输入`npm init`初始化工程
 安装hardhat`npm i --save-dev hardhat`
+使用hardhat创建工程模板`npx hardhat`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjY1NTY2MjcsMTA0ODU3MTUwN119
+eyJoaXN0b3J5IjpbMTk4OTY2MCwxMDQ4NTcxNTA3XX0=
 -->
