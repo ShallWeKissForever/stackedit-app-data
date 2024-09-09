@@ -47,10 +47,40 @@ const salt = vars.get("DEPLOY_SALT", "12345");
 const accounts = vars.has("TEST_PK") ? [vars.get("TEST_PK")] : [];
 ```
 
+### 部署到远程网络
+要部署到远程网络（例如主网或任何测试网），您需要将`network`条目添加到`hardhat.config.js`文件中。我们将在本示例中使用 Sepolia，但您可以添加任何网络。对于密钥存储，请使用`configuration variables` 。
 
+```javasc
+require("@nomicfoundation/hardhat-toolbox");
+
+// Ensure your configuration variables are set before executing the script
+const { vars } = require("hardhat/config");
+
+// Go to https://infura.io, sign up, create a new API key
+// in its dashboard, and add it to the configuration variables
+const INFURA_API_KEY = vars.get("INFURA_API_KEY");
+
+// Add your Sepolia account private key to the configuration variables
+// To export your private key from Coinbase Wallet, go to
+// Settings > Developer Settings > Show private key
+// To export your private key from Metamask, open Metamask and
+// go to Account Details > Export Private Key
+// Beware: NEVER put real Ether into testing accounts
+const SEPOLIA_PRIVATE_KEY = vars.get("SEPOLIA_PRIVATE_KEY");
+
+module.exports = {
+  solidity: "0.8.24",
+  networks: {
+    sepolia: {
+      url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: [SEPOLIA_PRIVATE_KEY],
+    },
+  },
+};
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk0MDMyOTg1LC0zMDY2MTc5MTksLTMwNj
-YxNzkxOSw2NTA2MDM1OTcsLTM2NzUyMjAwLDEwODk5NDQ0NDYs
-LTk2NjcxMDYzOSwtMTU5MTE3NjQzOCwtMTc4MzY1NjE0NiwxMD
-Q4NTcxNTA3XX0=
+eyJoaXN0b3J5IjpbLTE4ODY1NDI0MDgsLTMwNjYxNzkxOSwtMz
+A2NjE3OTE5LDY1MDYwMzU5NywtMzY3NTIyMDAsMTA4OTk0NDQ0
+NiwtOTY2NzEwNjM5LC0xNTkxMTc2NDM4LC0xNzgzNjU2MTQ2LD
+EwNDg1NzE1MDddfQ==
 -->
