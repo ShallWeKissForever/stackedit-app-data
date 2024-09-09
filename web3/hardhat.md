@@ -50,7 +50,7 @@ const accounts = vars.has("TEST_PK") ? [vars.get("TEST_PK")] : [];
 ### 部署到远程网络
 要部署到远程网络（例如主网或任何测试网），您需要将`network`条目添加到`hardhat.config.js`文件中。我们将在本示例中使用 Sepolia，但您可以添加任何网络。对于密钥存储，请使用`configuration variables` 。
 
-```javasc
+```javascript
 require("@nomicfoundation/hardhat-toolbox");
 
 // Ensure your configuration variables are set before executing the script
@@ -78,9 +78,15 @@ module.exports = {
   },
 };
 ```
+
+在进行交易之前，您必须将钱包网络更改为 Sepolia。  
+最后，运行：
+```
+npx hardhat ignition deploy ./ignition/modules/Token.js --network sepolia
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODY1NDI0MDgsLTMwNjYxNzkxOSwtMz
-A2NjE3OTE5LDY1MDYwMzU5NywtMzY3NTIyMDAsMTA4OTk0NDQ0
-NiwtOTY2NzEwNjM5LC0xNTkxMTc2NDM4LC0xNzgzNjU2MTQ2LD
-EwNDg1NzE1MDddfQ==
+eyJoaXN0b3J5IjpbLTYxNTE0Nzg1MiwtMzA2NjE3OTE5LC0zMD
+Y2MTc5MTksNjUwNjAzNTk3LC0zNjc1MjIwMCwxMDg5OTQ0NDQ2
+LC05NjY3MTA2MzksLTE1OTExNzY0MzgsLTE3ODM2NTYxNDYsMT
+A0ODU3MTUwN119
 -->
