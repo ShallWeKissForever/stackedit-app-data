@@ -17,7 +17,7 @@ npm config set registry=http://registry.npm. taobao. org
 使用hardhat创建工程模板：`npx hardhat init`
 编译合约：`npx hardhat compile`
 开启节点：新打开一个终端`npx hardhat node`
-部署合约在节点中：`npx hardhat run .\folder\file (--network localhost)`运行在线程里( 节点 )中
+部署合约：`npx hardhat run .\folder\file (--network localhost)`运行在线程里( 节点 )中
 运行单元测试`npx hardhat test (.\test\file) (--network localhost)`( 在节点上 )运行所有( 指定 )文件的单元测试
 测试和部署的时候都会自动编译
 
@@ -85,8 +85,8 @@ module.exports = {
 npx hardhat ignition deploy ./ignition/modules/Token.js --network sepolia
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNTE0Nzg1MiwtMzA2NjE3OTE5LC0zMD
-Y2MTc5MTksNjUwNjAzNTk3LC0zNjc1MjIwMCwxMDg5OTQ0NDQ2
-LC05NjY3MTA2MzksLTE1OTExNzY0MzgsLTE3ODM2NTYxNDYsMT
-A0ODU3MTUwN119
+eyJoaXN0b3J5IjpbNzIyMDUxODEwLC0zMDY2MTc5MTksLTMwNj
+YxNzkxOSw2NTA2MDM1OTcsLTM2NzUyMjAwLDEwODk5NDQ0NDYs
+LTk2NjcxMDYzOSwtMTU5MTE3NjQzOCwtMTc4MzY1NjE0NiwxMD
+Q4NTcxNTA3XX0=
 -->
