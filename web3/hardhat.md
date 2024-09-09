@@ -59,7 +59,8 @@ const { vars } = require("hardhat/config");
 // 首选https://infura.io，注册，在其仪表板中创建新的API密钥，并将其添加到配置变量中
 const INFURA_API_KEY = vars.get("INFURA_API_KEY");
 
-// Add your Sepolia account private key to the configuration variables To export your private key from Coinbase Wallet, go to Settings > Developer Settings > Show private key To export your private key from Metamask, open Metamask and go to Account Details > Export Private Key Beware: NEVER put real Ether into testing accounts
+// 将您的Sepolia帐户私钥添加到配置变量中。要从Coinbase钱包导出私钥，请转到“设置”>“开发人员设置”>显示私钥。
+// 要从Metamask导出私钥，打开Metamask并转到“帐户详细信息”>“导出私钥”。注意：切勿将真实的以太币放入测试帐户
 const SEPOLIA_PRIVATE_KEY = vars.get("SEPOLIA_PRIVATE_KEY");
 
 module.exports = {
@@ -79,7 +80,7 @@ module.exports = {
 npx hardhat ignition deploy ./ignition/modules/Token.js --network sepolia
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1OTk0NTMyMiwtMzA2NjE3OTE5LC0zMD
+eyJoaXN0b3J5IjpbMjAxNDUwNDU0MiwtMzA2NjE3OTE5LC0zMD
 Y2MTc5MTksNjUwNjAzNTk3LC0zNjc1MjIwMCwxMDg5OTQ0NDQ2
 LC05NjY3MTA2MzksLTE1OTExNzY0MzgsLTE3ODM2NTYxNDYsMT
 A0ODU3MTUwN119
