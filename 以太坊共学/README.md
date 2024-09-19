@@ -66,7 +66,9 @@
 🪧完成以上任务后需截图上传至TinTinLand Zealy社区方可获得积分
 🪧Zealy地址：https://zealy.io/cw/tintinland/questboard
 
-**突击兵：**
+# BF1
+
+## **突击兵：**
 
 突击兵不要带刺刀，降低抬枪速度
 
@@ -85,7 +87,7 @@
 
   
 
-**支援兵：**
+## **支援兵：**
 
 支援兵一般都需要趴下来架枪，提升作战半径和稳定性
 
@@ -103,7 +105,7 @@
 
   
 
-**医疗兵：**
+#**医疗兵：**
 
 大部分枪连射（几枪之后）有连射惩罚
 
@@ -159,7 +161,7 @@
 -   Repetierpistole M1912 支援兵专用武器 不推荐
 -   Mars Automatic 侦察兵专用武器 不推荐 高精度高弹速 用于中距离补枪 切枪快
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTE2MTEyMjksLTEwOTE2MTEyMjksMj
-kyNTA4NDg1LDM4OTUyOTMyMCw0ODA1MjMyOTAsODk3ODU2MjMx
-XX0=
+eyJoaXN0b3J5IjpbODM0ODc3MDYyLC0xMDkxNjExMjI5LC0xMD
+kxNjExMjI5LDI5MjUwODQ4NSwzODk1MjkzMjAsNDgwNTIzMjkw
+LDg5Nzg1NjIzMV19
 -->
