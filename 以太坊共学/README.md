@@ -105,7 +105,7 @@
 
   
 
-#**医疗兵：**
+## **医疗兵：**
 
 大部分枪连射（几枪之后）有连射惩罚
 
@@ -122,7 +122,7 @@
 
   
 
-**狙击兵：**
+## **狙击兵：**
 
 各个武器各有特色，狙击枪不建议使用脚架
 
@@ -142,7 +142,7 @@
 
   
 
-**副武器：**
+## **副武器：**
 
 不同兵种有兵种独特的副武器
 
@@ -161,7 +161,7 @@
 -   Repetierpistole M1912 支援兵专用武器 不推荐
 -   Mars Automatic 侦察兵专用武器 不推荐 高精度高弹速 用于中距离补枪 切枪快
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM0ODc3MDYyLC0xMDkxNjExMjI5LC0xMD
+eyJoaXN0b3J5IjpbMTc5MDAxNTg1LC0xMDkxNjExMjI5LC0xMD
 kxNjExMjI5LDI5MjUwODQ4NSwzODk1MjkzMjAsNDgwNTIzMjkw
 LDg5Nzg1NjIzMV19
 -->
