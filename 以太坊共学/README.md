@@ -5,26 +5,19 @@
 
 # **学号154**
 
-
-群公告
-
-��同学们【第一周：以太坊101】课程已经更新！
-
-��课程学习链接：https://youtu.be/4IH90wMU7Ww
-
-✏️第一课Task任务：https://wj.qq.com/s2/15288104/g375/
+课程学习链接：https://youtu.be/4IH90wMU7Ww
 
 ✨学员手册：https://attractive-spade-1e3.notion.site/3c55c15d535c43f7a236183af40cf76b?pvs=4
 
-��「学号&个人积分查询」：https://www.notion.so/f24aaf7c1e614a9a9f1ceaf7af6d45dd?pvs=4
+「学号&个人积分查询」：https://www.notion.so/f24aaf7c1e614a9a9f1ceaf7af6d45dd?pvs=4
 
 ⏰开营时间：9月5日（周四）晚上20:00
 
-��腾讯会议室地址：https://meeting.tencent.com/dm/R2a9FD8dJ2ad
+腾讯会议室地址：https://meeting.tencent.com/dm/R2a9FD8dJ2ad
 
 ————————
 
-��福利
+福利
 
 1⃣️10月15日 24:00前完成4次task，瓜分$150奖金池
 
@@ -66,7 +59,7 @@
 🪧完成以上任务后需截图上传至TinTinLand Zealy社区方可获得积分
 🪧Zealy地址：https://zealy.io/cw/tintinland/questboard
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkyNTA4NDg1LDE3OTAwMTU4NSwtMTA5MT
-YxMTIyOSwtMTA5MTYxMTIyOSwyOTI1MDg0ODUsMzg5NTI5MzIw
-LDQ4MDUyMzI5MCw4OTc4NTYyMzFdfQ==
+eyJoaXN0b3J5IjpbLTExOTA4NzY5OTYsMjkyNTA4NDg1LDE3OT
+AwMTU4NSwtMTA5MTYxMTIyOSwtMTA5MTYxMTIyOSwyOTI1MDg0
+ODUsMzg5NTI5MzIwLDQ4MDUyMzI5MCw4OTc4NTYyMzFdfQ==
 -->
