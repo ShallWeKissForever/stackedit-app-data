@@ -14,7 +14,9 @@
 - [ ] 5. 输入框自动小数填充&转换
 - [ ] 6. 选择币对的功能添加一键交换token1&2的按钮
 - [ ] 7. 优化UI
+- [ ] 8. 考虑把前端拉取pool后获取token 的名称、符号和 URI的部分写进合约里，这样发一个view就行了
+- [ ] 9. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取”
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NjE5MTE4MF19
+eyJoaXN0b3J5IjpbMjA5MjcwNjMyOCwyMDY2MTkxMTgwXX0=
 -->
