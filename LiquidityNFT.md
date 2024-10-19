@@ -12,8 +12,9 @@
 - [ ] 4. 移除流动性界面显示LP Token Balance
 - `lp_token_supply`
 - [ ] 5. 输入框自动小数填充&转换
-- [ ] 6. 优化UI
+- [ ] 6. 选择币对的功能添加一键交换token1&2的按钮
+- [ ] 7. 优化UI
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMDMxMjgyXX0=
+eyJoaXN0b3J5IjpbMjA2NjE5MTE4MF19
 -->
