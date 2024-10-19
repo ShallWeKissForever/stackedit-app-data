@@ -6,11 +6,12 @@
 1. 显示NFT
 2. 如何刷新NFT
 3. Pool信息持久化
-4. 移除流动性界面显示LP Token Balance
 - `LiquidityPoolConfigs`中的`all_pools: SmartVector<Object<LiquidityPool>>`中的`Object<LiquidityPool>`等于`Object<Metadata>`
 - 先用一个view方法返回all_pools，再循环调用 `lp_token_supply`，再加到本地储存中
+
+4. 移除流动性界面显示LP Token Balance
 5. 优化UI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcxNDQ2OTk0LDIwMTY4NDU1NjQsLTEyNj
-QzMTUyMTZdfQ==
+eyJoaXN0b3J5IjpbLTEyNzMxNzkzNTYsMjAxNjg0NTU2NCwtMT
+I2NDMxNTIxNl19
 -->
