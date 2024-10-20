@@ -65,6 +65,15 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
    sudo chmod o+x /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
    ```
 
+```bash
+	sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
+	sudo chmod -R o+x /home/lighthouse /home/lighthouse/Liquidity_NFT /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
+	sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
+	sudo chmod o+x /home/lighthouse
+    sudo chmod o+x /home/lighthouse/Liquidity_NFT
+    sudo chmod o+x /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
+```
+
 3. **重启 Nginx**
    在权限调整之后，重启 Nginx 以应用更改：
    ```bash
@@ -74,7 +83,8 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
 ![问号](https://github.com/user-attachments/assets/dc64f23b-c14b-4c57-b8c0-1078e35ac54c)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyMzI3NjE5LC05NzE5NTAwMjcsMTExNz
-QwMjQ0NiwtMzg2NzM2OTE0LDE5MTkyMTcxMzQsMTc1ODc3MjAx
-MywzNTc1MzIzMDksMTYwMDEzNDUxNywyMDY2MTkxMTgwXX0=
+eyJoaXN0b3J5IjpbLTIwNzUxNjYzMTQsLTk3MTk1MDAyNywxMT
+E3NDAyNDQ2LC0zODY3MzY5MTQsMTkxOTIxNzEzNCwxNzU4Nzcy
+MDEzLDM1NzUzMjMwOSwxNjAwMTM0NTE3LDIwNjYxOTExODBdfQ
+==
 -->
