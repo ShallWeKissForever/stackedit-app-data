@@ -19,7 +19,7 @@ fun get_nft_uri(
 - `LiquidityPoolConfigs`中的`all_pools: SmartVector<Object<LiquidityPool>>`中的`Object<LiquidityPool>`等于`Object<Metadata>`
 - 先用一个view方法返回all_pools，再循环调用view查询名称、符号和 URI，再加到本地储存中
 
-- [ ] 4. 移除流动性界面显示LP Token Balance
+- [x] 4. 移除流动性界面显示LP Token Balance
 ```rust
 #[view]  
 public fun lp_token_supply_frontend(  
@@ -35,7 +35,7 @@ public fun lp_token_supply_frontend(
 - [ ] 9. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDA4NzMxOCwxOTE5MjE3MTM0LDE3NT
+eyJoaXN0b3J5IjpbLTM4NjczNjkxNCwxOTE5MjE3MTM0LDE3NT
 g3NzIwMTMsMzU3NTMyMzA5LDE2MDAxMzQ1MTcsMjA2NjE5MTE4
 MF19
 -->
