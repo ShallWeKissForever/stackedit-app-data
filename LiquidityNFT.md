@@ -34,6 +34,8 @@ public fun lp_token_supply_frontend(
 - [ ] 8. 考虑把前端拉取pool后获取token 的名称、符号和 URI的部分写进合约里，这样发一个view就行了
 - [ ] 9. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
 
+![问号](https://github.com/user-attachments/assets/dc64f23b-c14b-4c57-b8c0-1078e35ac54c)
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTExNzQwMjQ0NiwtMzg2NzM2OTE0LDE5MT
 kyMTcxMzQsMTc1ODc3MjAxMywzNTc1MzIzMDksMTYwMDEzNDUx
