@@ -14,7 +14,7 @@ fun get_nft_uri(
 ): String acquires ResourceAccountCap, MintedAddressStore {
 ```
 - [ ] 2. 如何刷新NFT
-- [ ] 
+- 通过get_nft_uri 这个view方法，确保每次更新都是最新的uri
 - [x] 3. 从链上获取Pool信息
 - `LiquidityPoolConfigs`中的`all_pools: SmartVector<Object<LiquidityPool>>`中的`Object<LiquidityPool>`等于`Object<Metadata>`
 - 先用一个view方法返回all_pools，再循环调用view查询名称、符号和 URI，再加到本地储存中
@@ -35,6 +35,6 @@ public fun lp_token_supply_frontend(
 - [ ] 9. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MDE5MjI2LDE3NTg3NzIwMTMsMzU3NT
-MyMzA5LDE2MDAxMzQ1MTcsMjA2NjE5MTE4MF19
+eyJoaXN0b3J5IjpbMTkxOTIxNzEzNCwxNzU4NzcyMDEzLDM1Nz
+UzMjMwOSwxNjAwMTM0NTE3LDIwNjYxOTExODBdfQ==
 -->
