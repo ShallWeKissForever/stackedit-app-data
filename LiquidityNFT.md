@@ -10,7 +10,18 @@
 - 先用一个view方法返回all_pools，再循环调用view查询名称、符号和 URI，再加到本地储存中
 
 - [ ] 4. 移除流动性界面显示LP Token Balance
-- `lp_token_supply`
+```rust
+#[view]  
+public fun  liquidity_pool_address(  
+    token_1: Object<Metadata>,  
+    token_2: Object<Metadata>,  
+    is_stable: bool,  
+): address acquires ResourceAccountCap {
+```
+```rust
+#[view]  
+public fun lp_token_supply<T: key>(pool: Object<T>): u128 {  
+```
 - [ ] 5. 输入框自动小数填充&转换
 - [ ] 6. 选择币对的功能添加一键交换token1&2的按钮
 - [ ] 7. 优化UI
@@ -18,5 +29,6 @@
 - [ ] 9. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMDEzNDUxNywyMDY2MTkxMTgwXX0=
+eyJoaXN0b3J5IjpbMzU3NTMyMzA5LDE2MDAxMzQ1MTcsMjA2Nj
+E5MTE4MF19
 -->
