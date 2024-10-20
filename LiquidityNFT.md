@@ -13,7 +13,7 @@ fun get_nft_uri(
     is_stable: bool,  
 ): String acquires ResourceAccountCap, MintedAddressStore {
 ```
-- [ ] 2. 如何刷新NFT
+- [x] 2. 如何刷新NFT
 - 通过把update方法加入get_nft_uri 这个view方法，先update再return，确保每次更新都是最新的uri
 - [x] 3. 从链上获取Pool信息
 - `LiquidityPoolConfigs`中的`all_pools: SmartVector<Object<LiquidityPool>>`中的`Object<LiquidityPool>`等于`Object<Metadata>`
@@ -37,7 +37,7 @@ public fun lp_token_supply_frontend(
 ![问号](https://github.com/user-attachments/assets/dc64f23b-c14b-4c57-b8c0-1078e35ac54c)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNzQwMjQ0NiwtMzg2NzM2OTE0LDE5MT
-kyMTcxMzQsMTc1ODc3MjAxMywzNTc1MzIzMDksMTYwMDEzNDUx
-NywyMDY2MTkxMTgwXX0=
+eyJoaXN0b3J5IjpbLTk3MTk1MDAyNywxMTE3NDAyNDQ2LC0zOD
+Y3MzY5MTQsMTkxOTIxNzEzNCwxNzU4NzcyMDEzLDM1NzUzMjMw
+OSwxNjAwMTM0NTE3LDIwNjYxOTExODBdfQ==
 -->
