@@ -3,7 +3,7 @@
 
 > Written with [StackEdit中文版](https://stackedit.cn/).
 
-- [ ] 1. 显示NFT
+- [x] 1. 显示NFT
 ```rust
 #[view]  
 fun get_nft_uri(  
@@ -35,6 +35,7 @@ public fun lp_token_supply_frontend(
 - [ ] 9. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxOTIxNzEzNCwxNzU4NzcyMDEzLDM1Nz
-UzMjMwOSwxNjAwMTM0NTE3LDIwNjYxOTExODBdfQ==
+eyJoaXN0b3J5IjpbMTc3NDA4NzMxOCwxOTE5MjE3MTM0LDE3NT
+g3NzIwMTMsMzU3NTMyMzA5LDE2MDAxMzQ1MTcsMjA2NjE5MTE4
+MF19
 -->
