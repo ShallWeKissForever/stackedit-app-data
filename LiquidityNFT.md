@@ -30,9 +30,10 @@ public fun lp_token_supply_frontend(
 ```
 - [ ] 5. 输入框自动小数填充&转换
 - [ ] 6. 选择币对的功能添加一键交换token1&2的按钮
-- [ ] 7. 优化UI
-- [ ] 8. 考虑把前端拉取pool后获取token 的名称、符号和 URI的部分写进合约里，这样发一个view就行了
-- [ ] 9. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
+- [ ] 7.重新绘制NFT图片
+- [ ] 8. 优化UI
+- [ ] 9. 考虑把前端拉取pool后获取token 的名称、符号和 URI的部分写进合约里，这样发一个view就行了
+- [ ] 10. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
 
 
 ### 解决方案：
@@ -83,8 +84,8 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
 ![问号](https://github.com/user-attachments/assets/dc64f23b-c14b-4c57-b8c0-1078e35ac54c)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzUxNjYzMTQsLTk3MTk1MDAyNywxMT
-E3NDAyNDQ2LC0zODY3MzY5MTQsMTkxOTIxNzEzNCwxNzU4Nzcy
-MDEzLDM1NzUzMjMwOSwxNjAwMTM0NTE3LDIwNjYxOTExODBdfQ
-==
+eyJoaXN0b3J5IjpbLTc1MjA0NTI0NiwtMjA3NTE2NjMxNCwtOT
+cxOTUwMDI3LDExMTc0MDI0NDYsLTM4NjczNjkxNCwxOTE5MjE3
+MTM0LDE3NTg3NzIwMTMsMzU3NTMyMzA5LDE2MDAxMzQ1MTcsMj
+A2NjE5MTE4MF19
 -->
