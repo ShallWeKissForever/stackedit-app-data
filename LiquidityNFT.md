@@ -28,7 +28,7 @@ public fun lp_token_supply_frontend(
     is_stable: bool,  
 ): u128 acquires ResourceAccountCap {
 ```
-- [ ] 5. 输入框自动小数填充&转换
+- [x] 5. 输入框自动小数填充&转换
 - [ ] 6. 选择币对的功能添加一键交换token1&2的按钮
 - [ ] 7.重新绘制NFT图片
 - [ ] 8. 优化UI
@@ -84,8 +84,8 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
 ![问号](https://github.com/user-attachments/assets/dc64f23b-c14b-4c57-b8c0-1078e35ac54c)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MjA0NTI0NiwtMjA3NTE2NjMxNCwtOT
-cxOTUwMDI3LDExMTc0MDI0NDYsLTM4NjczNjkxNCwxOTE5MjE3
-MTM0LDE3NTg3NzIwMTMsMzU3NTMyMzA5LDE2MDAxMzQ1MTcsMj
-A2NjE5MTE4MF19
+eyJoaXN0b3J5IjpbLTE0Mjg4NjA1MTgsLTc1MjA0NTI0NiwtMj
+A3NTE2NjMxNCwtOTcxOTUwMDI3LDExMTc0MDI0NDYsLTM4Njcz
+NjkxNCwxOTE5MjE3MTM0LDE3NTg3NzIwMTMsMzU3NTMyMzA5LD
+E2MDAxMzQ1MTcsMjA2NjE5MTE4MF19
 -->
