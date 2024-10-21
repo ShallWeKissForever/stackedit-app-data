@@ -80,10 +80,13 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
    ```bash
    sudo systemctl restart nginx
    ```
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA0NzM4Mzg5LDc1OTIyODI0NSwtMjA2ND
-M5MTUwNywtMTQyODg2MDUxOCwtNzUyMDQ1MjQ2LC0yMDc1MTY2
-MzE0LC05NzE5NTAwMjcsMTExNzQwMjQ0NiwtMzg2NzM2OTE0LD
-E5MTkyMTcxMzQsMTc1ODc3MjAxMywzNTc1MzIzMDksMTYwMDEz
-NDUxNywyMDY2MTkxMTgwXX0=
+eyJoaXN0b3J5IjpbLTE1Mzg4NTQyNDEsOTA0NzM4Mzg5LDc1OT
+IyODI0NSwtMjA2NDM5MTUwNywtMTQyODg2MDUxOCwtNzUyMDQ1
+MjQ2LC0yMDc1MTY2MzE0LC05NzE5NTAwMjcsMTExNzQwMjQ0Ni
+wtMzg2NzM2OTE0LDE5MTkyMTcxMzQsMTc1ODc3MjAxMywzNTc1
+MzIzMDksMTYwMDEzNDUxNywyMDY2MTkxMTgwXX0=
 -->
