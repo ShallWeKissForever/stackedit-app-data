@@ -29,7 +29,7 @@ public fun lp_token_supply_frontend(
 ): u128 acquires ResourceAccountCap {
 ```
 - [x] 5. 输入框自动小数填充&转换
-- [ ] 6. 选择币对的功能添加一键交换token1&2的按钮
+- [ ] ~~6. 选择币对的功能添加一键交换token1&2的按钮~~
 - [ ] 7.重新绘制NFT图片
 - [ ] 8. 优化UI
 - [ ] 9. 考虑把前端拉取pool后获取token 的名称、符号和 URI的部分写进合约里，这样发一个view就行了
@@ -81,9 +81,9 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
    sudo systemctl restart nginx
    ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU5MjI4MjQ1LC0yMDY0MzkxNTA3LC0xND
-I4ODYwNTE4LC03NTIwNDUyNDYsLTIwNzUxNjYzMTQsLTk3MTk1
-MDAyNywxMTE3NDAyNDQ2LC0zODY3MzY5MTQsMTkxOTIxNzEzNC
-wxNzU4NzcyMDEzLDM1NzUzMjMwOSwxNjAwMTM0NTE3LDIwNjYx
-OTExODBdfQ==
+eyJoaXN0b3J5IjpbOTA0NzM4Mzg5LDc1OTIyODI0NSwtMjA2ND
+M5MTUwNywtMTQyODg2MDUxOCwtNzUyMDQ1MjQ2LC0yMDc1MTY2
+MzE0LC05NzE5NTAwMjcsMTExNzQwMjQ0NiwtMzg2NzM2OTE0LD
+E5MTkyMTcxMzQsMTc1ODc3MjAxMywzNTc1MzIzMDksMTYwMDEz
+NDUxNywyMDY2MTkxMTgwXX0=
 -->
