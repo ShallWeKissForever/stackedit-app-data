@@ -33,7 +33,7 @@ public fun lp_token_supply_frontend(
 - [ ] 7.重新绘制NFT图片
 - [ ] 8. 优化UI
 - [ ] 9. 考虑把前端拉取pool后获取token 的名称、符号和 URI的部分写进合约里，这样发一个view就行了
-- [ ] 10. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
+- [x] 10. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
 
 
 ### 解决方案：
@@ -81,8 +81,9 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
    sudo systemctl restart nginx
    ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjQzOTE1MDcsLTE0Mjg4NjA1MTgsLT
-c1MjA0NTI0NiwtMjA3NTE2NjMxNCwtOTcxOTUwMDI3LDExMTc0
-MDI0NDYsLTM4NjczNjkxNCwxOTE5MjE3MTM0LDE3NTg3NzIwMT
-MsMzU3NTMyMzA5LDE2MDAxMzQ1MTcsMjA2NjE5MTE4MF19
+eyJoaXN0b3J5IjpbNzU5MjI4MjQ1LC0yMDY0MzkxNTA3LC0xND
+I4ODYwNTE4LC03NTIwNDUyNDYsLTIwNzUxNjYzMTQsLTk3MTk1
+MDAyNywxMTE3NDAyNDQ2LC0zODY3MzY5MTQsMTkxOTIxNzEzNC
+wxNzU4NzcyMDEzLDM1NzUzMjMwOSwxNjAwMTM0NTE3LDIwNjYx
+OTExODBdfQ==
 -->
