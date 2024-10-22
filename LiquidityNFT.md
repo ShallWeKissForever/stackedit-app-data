@@ -75,6 +75,10 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
     sudo chmod o+x /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
 ```
 
+```bash
+npm run build
+```
+
 3. **重启 Nginx**
    在权限调整之后，重启 Nginx 以应用更改：
    ```bash
@@ -82,10 +86,10 @@ Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可�
    ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MTE4MzU0OSw2NTgxMDY3OTYsOTA0Nz
-M4Mzg5LDc1OTIyODI0NSwtMjA2NDM5MTUwNywtMTQyODg2MDUx
-OCwtNzUyMDQ1MjQ2LC0yMDc1MTY2MzE0LC05NzE5NTAwMjcsMT
-ExNzQwMjQ0NiwtMzg2NzM2OTE0LDE5MTkyMTcxMzQsMTc1ODc3
-MjAxMywzNTc1MzIzMDksMTYwMDEzNDUxNywyMDY2MTkxMTgwXX
-0=
+eyJoaXN0b3J5IjpbLTE0NTk5Mzk0MjMsLTM5MTE4MzU0OSw2NT
+gxMDY3OTYsOTA0NzM4Mzg5LDc1OTIyODI0NSwtMjA2NDM5MTUw
+NywtMTQyODg2MDUxOCwtNzUyMDQ1MjQ2LC0yMDc1MTY2MzE0LC
+05NzE5NTAwMjcsMTExNzQwMjQ0NiwtMzg2NzM2OTE0LDE5MTky
+MTcxMzQsMTc1ODc3MjAxMywzNTc1MzIzMDksMTYwMDEzNDUxNy
+wyMDY2MTkxMTgwXX0=
 -->
