@@ -71,12 +71,10 @@ npm run build
 ```
 
 ```bash
-	sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
-	sudo chmod -R o+x /home/lighthouse /home/lighthouse/Liquidity_NFT /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
-	sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
-	sudo chmod o+x /home/lighthouse
-    sudo chmod o+x /home/lighthouse/Liquidity_NFT
-    sudo chmod o+x /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
+sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
+sudo chmod -R o+x /home/lighthouse /home/lighthouse/Liquidity_NFT /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
+sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
+sudo chmod o+x /home/lighthouse
 ```
 
 
@@ -88,10 +86,10 @@ npm run build
    ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Nzk4ODIxMywtMzkxMTgzNTQ5LDY1OD
-EwNjc5Niw5MDQ3MzgzODksNzU5MjI4MjQ1LC0yMDY0MzkxNTA3
-LC0xNDI4ODYwNTE4LC03NTIwNDUyNDYsLTIwNzUxNjYzMTQsLT
-k3MTk1MDAyNywxMTE3NDAyNDQ2LC0zODY3MzY5MTQsMTkxOTIx
-NzEzNCwxNzU4NzcyMDEzLDM1NzUzMjMwOSwxNjAwMTM0NTE3LD
-IwNjYxOTExODBdfQ==
+eyJoaXN0b3J5IjpbMTkyNDY5NzM2MywtMTk3OTg4MjEzLC0zOT
+ExODM1NDksNjU4MTA2Nzk2LDkwNDczODM4OSw3NTkyMjgyNDUs
+LTIwNjQzOTE1MDcsLTE0Mjg4NjA1MTgsLTc1MjA0NTI0NiwtMj
+A3NTE2NjMxNCwtOTcxOTUwMDI3LDExMTc0MDI0NDYsLTM4Njcz
+NjkxNCwxOTE5MjE3MTM0LDE3NTg3NzIwMTMsMzU3NTMyMzA5LD
+E2MDAxMzQ1MTcsMjA2NjE5MTE4MF19
 -->
