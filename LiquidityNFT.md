@@ -34,62 +34,11 @@ public fun lp_token_supply_frontend(
 - [ ] 8. 优化UI
 - [ ] 9. 考虑把前端拉取pool后获取token 的名称、符号和 URI的部分写进合约里，这样发一个view就行了
 - [x] 10. 考虑在拉取pool完成之前把“选择代币”按钮改为“拉取Pool中...”
-
-
-### 解决方案：
-
-1. **给 Nginx 用户访问权限**
-   确认后，需要给 Nginx 用户（比如 `www-data`）访问文件的权限。将 Nginx 用户添加到 `lighthouse` 用户组，或者简单地调整权限以允许所有用户读取和执行目录和文件。
-
-   - 给 Nginx 用户添加读取权限：
-     ```bash
-     sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
-     ```
-
-   - 确保对所有相关目录有执行权限：
-     ```bash
-     sudo chmod -R o+x /home/lighthouse /home/lighthouse/Liquidity_NFT /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
-     ```
-Nginx 在你的服务器上是以 `www-data` 用户运行的。现在我们可以为 `www-data` 用户赋予正确的权限，确保它可以访问 `/home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist` 目录及其文件。
-
-1. **为 `www-data` 用户赋予读取权限**
-   确保 `www-data` 用户对相关目录和文件具有读取权限：
-   ```bash
-   sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
-   ```
-
-2. **赋予执行权限给目录**
-   确保 `www-data` 用户可以进入每一级目录，通过为这些目录添加执行权限：
-   ```bash
-   sudo chmod o+x /home/lighthouse
-   sudo chmod o+x /home/lighthouse/Liquidity_NFT
-   sudo chmod o+x /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
-   ```
-
-```bash
-npm run build
-```
-
-```bash
-sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
-sudo chmod -R o+x /home/lighthouse /home/lighthouse/Liquidity_NFT /home/lighthouse/Liquidity_NFT/liquiditynft_frontend
-sudo chmod -R o+r /home/lighthouse/Liquidity_NFT/liquiditynft_frontend/dist
-sudo chmod o+x /home/lighthouse
-```
-
-
-
-3. **重启 Nginx**
-   在权限调整之后，重启 Nginx 以应用更改：
-   ```bash
-   sudo systemctl restart nginx
-   ```
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDY5NzM2MywtMTk3OTg4MjEzLC0zOT
-ExODM1NDksNjU4MTA2Nzk2LDkwNDczODM4OSw3NTkyMjgyNDUs
-LTIwNjQzOTE1MDcsLTE0Mjg4NjA1MTgsLTc1MjA0NTI0NiwtMj
-A3NTE2NjMxNCwtOTcxOTUwMDI3LDExMTc0MDI0NDYsLTM4Njcz
-NjkxNCwxOTE5MjE3MTM0LDE3NTg3NzIwMTMsMzU3NTMyMzA5LD
-E2MDAxMzQ1MTcsMjA2NjE5MTE4MF19
+eyJoaXN0b3J5IjpbOTYzMDU4MDM2LDE5MjQ2OTczNjMsLTE5Nz
+k4ODIxMywtMzkxMTgzNTQ5LDY1ODEwNjc5Niw5MDQ3MzgzODks
+NzU5MjI4MjQ1LC0yMDY0MzkxNTA3LC0xNDI4ODYwNTE4LC03NT
+IwNDUyNDYsLTIwNzUxNjYzMTQsLTk3MTk1MDAyNywxMTE3NDAy
+NDQ2LC0zODY3MzY5MTQsMTkxOTIxNzEzNCwxNzU4NzcyMDEzLD
+M1NzUzMjMwOSwxNjAwMTM0NTE3LDIwNjYxOTExODBdfQ==
 -->
