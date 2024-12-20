@@ -18,7 +18,7 @@
     
     -   [页面路由（基于文件系统的路由）](#页面路由（基于文件系统的路由）是什么？)
     -   API 路由（创建后端 API）
-    -   [静态生成 (Static Site Generation, SSG)](#什么是静态生成？) 和服务器端渲染 (Server Side Rendering, SSR)
+    -   [静态生成 (Static Site Generation, SSG)](#什么是静态生成？) 和[服务器端渲染 (Server Side Rendering, SSR)](#什么是服务器端渲染？)
     -   动态路由和动态页面渲染
 
 ----------
@@ -473,7 +473,7 @@ export async function getStaticPaths() {
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 
-### **什么是服务器端渲染 (Server Side Rendering, SSR)?**
+### **什么是服务器端渲染？**
 
 服务器端渲染 (Server Side Rendering, SSR) 是一种页面渲染方式。在 SSR 中，每次用户请求时，服务器会动态生成完整的 HTML 页面并发送到客户端。SSR 可以提高页面的首屏加载速度，并有助于搜索引擎优化（SEO）。
 
@@ -626,7 +626,7 @@ export default function BlogPost({ post }) {
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI0NTc0OTIsLTY3NDk3MDc0OCwtMjM0Nz
-Q4MjQsMTAwNjA2OTY1NywtNzg4MzIwNTk3LDQ5Mjk4MDg5MSwt
-Nzg4MzIwNTk3XX0=
+eyJoaXN0b3J5IjpbLTE4NzE4OTczOTksLTY3NDk3MDc0OCwtMj
+M0NzQ4MjQsMTAwNjA2OTY1NywtNzg4MzIwNTk3LDQ5Mjk4MDg5
+MSwtNzg4MzIwNTk3XX0=
 -->
