@@ -15,7 +15,6 @@
 -   **Next.js 基本概念**
     
     -   页面路由（基于文件系统的路由）
-    -  - 
     -   API 路由（创建后端 API）
     -   静态生成 (Static Site Generation, SSG) 和服务器端渲染 (Server Side Rendering, SSR)
     -   动态路由和动态页面渲染
@@ -110,5 +109,6 @@
 
 通过学习上述内容，并结合实践项目，你可以达到在工作中使用 Next.js 的水平，能够高效地开发并优化现代化的 Web 应用程序。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkyOTgwODkxLC03ODgzMjA1OTddfQ==
+eyJoaXN0b3J5IjpbLTc4ODMyMDU5Nyw0OTI5ODA4OTEsLTc4OD
+MyMDU5N119
 -->
