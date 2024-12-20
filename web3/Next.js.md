@@ -467,77 +467,13 @@ export async function getStaticPaths() {
 
 ----------
 
-### **SSG 与其他渲染方式对比**
-
-特性
-
-SSG
-
-SSR
-
-CSR
-
-ISR
-
-**渲染时间**
-
-构建时生成
-
-请求时生成
-
-客户端生成
-
-构建时生成 + 后台更新
-
-**性能**
-
-非常高（CDN 支持）
-
-中等（依赖服务器性能）
-
-较低（依赖客户端渲染速度）
-
-接近 SSG，后台增量更新性能稍低
-
-**SEO 支持**
-
-非常好
-
-非常好
-
-较差
-
-非常好
-
-**动态数据支持**
-
-支持有限（需重新构建）
-
-完全支持
-
-完全支持
-
-动态支持（通过后台增量更新）
-
-**复杂性**
-
-低
-
-中等
-
-低
-
-中等
-
-----------
-
 ### **总结**
 
 静态生成（SSG）是一种高效的页面渲染方式，适合内容静态或更新频率较低的场景。结合增量静态生成（ISR），SSG 可以在保证性能的同时，支持动态更新需求。对于需要快速交付、提升 SEO 和性能的应用，SSG 是一种非常合适的选择。
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NDk3MDc0OCwtMjM0NzQ4MjQsMTAwNj
-A2OTY1NywtNzg4MzIwNTk3LDQ5Mjk4MDg5MSwtNzg4MzIwNTk3
-XX0=
+eyJoaXN0b3J5IjpbMTM2NjkzODIyNSwtNjc0OTcwNzQ4LC0yMz
+Q3NDgyNCwxMDA2MDY5NjU3LC03ODgzMjA1OTcsNDkyOTgwODkx
+LC03ODgzMjA1OTddfQ==
 -->
