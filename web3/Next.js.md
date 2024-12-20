@@ -17,7 +17,7 @@
 -   **Next.js 基本概念**
     
     -   [页面路由（基于文件系统的路由）](#页面路由（基于文件系统的路由）是什么？)
-    -   [API 路由（创建后端 API）](#%E4%BB%80%E4%B9%88%E6%98%AF%20API%20%E8%B7%AF%E7%94%B1%EF%BC%9F)
+    -   [API 路由（创建后端 API）](#什么是API路由？)
     -   [静态生成 (Static Site Generation, SSG)](#什么是静态生成？) 和[服务器端渲染 (Server Side Rendering, SSR)](#什么是服务器端渲染？)
     -   动态路由和动态页面渲染
 
@@ -828,7 +828,7 @@ API 路由是 Next.js 的一个强大功能，适合构建轻量级后端服务�
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc0NjIwNjc3LC00MjQzNDk2OCwtNjc0OT
-cwNzQ4LC0yMzQ3NDgyNCwxMDA2MDY5NjU3LC03ODgzMjA1OTcs
-NDkyOTgwODkxLC03ODgzMjA1OTddfQ==
+eyJoaXN0b3J5IjpbLTEwMjEzNzc4MTUsLTQyNDM0OTY4LC02Nz
+Q5NzA3NDgsLTIzNDc0ODI0LDEwMDYwNjk2NTcsLTc4ODMyMDU5
+Nyw0OTI5ODA4OTEsLTc4ODMyMDU5N119
 -->
