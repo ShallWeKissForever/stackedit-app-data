@@ -304,7 +304,7 @@
 
 ### **什么是静态生成？**
 
-静态生成（SSG）是 Next.js 提供的一种预渲染方式，在**构建时**生成 HTML 文件。生成的静态页面在用户访问时直接提供，不需要再运行服务器逻辑，因而具有更快的加载速度和更好的性能。
+静态生成 (Static Site Generation, SSG)是 Next.js 提供的一种预渲染方式，在**构建时**生成 HTML 文件。生成的静态页面在用户访问时直接提供，不需要再运行服务器逻辑，因而具有更快的加载速度和更好的性能。
 
 SSG 是现代 Jamstack 架构的核心，适合内容相对静态、不需要频繁更新的页面。
 
@@ -626,7 +626,7 @@ export default function BlogPost({ post }) {
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzE4OTczOTksLTY3NDk3MDc0OCwtMj
-M0NzQ4MjQsMTAwNjA2OTY1NywtNzg4MzIwNTk3LDQ5Mjk4MDg5
-MSwtNzg4MzIwNTk3XX0=
+eyJoaXN0b3J5IjpbLTQyNDM0OTY4LC02NzQ5NzA3NDgsLTIzND
+c0ODI0LDEwMDYwNjk2NTcsLTc4ODMyMDU5Nyw0OTI5ODA4OTEs
+LTc4ODMyMDU5N119
 -->
