@@ -472,8 +472,161 @@ export async function getStaticPaths() {
 静态生成（SSG）是一种高效的页面渲染方式，适合内容静态或更新频率较低的场景。结合增量静态生成（ISR），SSG 可以在保证性能的同时，支持动态更新需求。对于需要快速交付、提升 SEO 和性能的应用，SSG 是一种非常合适的选择。
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
+
+### **什么是服务器端渲染 (Server Side Rendering, SSR)?**
+
+服务器端渲染 (Server Side Rendering, SSR) 是一种页面渲染方式。在 SSR 中，每次用户请求时，服务器会动态生成完整的 HTML 页面并发送到客户端。SSR 可以提高页面的首屏加载速度，并有助于搜索引擎优化（SEO）。
+
+在 Next.js 中，SSR 是通过 `getServerSideProps` 方法实现的，它会在每次请求时运行，用于获取数据并渲染页面。
+
+----------
+
+### **怎么用 SSR？**
+
+在 Next.js 中，可以通过以下方式实现 SSR：
+
+#### **1. 使用 `getServerSideProps`**
+
+`getServerSideProps` 是 Next.js 提供的一个函数，用于在每次请求时动态获取页面所需的数据。
+
+```javascript
+// pages/blog/[id].js
+export async function getServerSideProps(context) {
+  const { id } = context.params;
+  const res = await fetch(`https://api.example.com/blog/${id}`);
+  const post = await res.json();
+
+  return {
+    props: { post }, // 将数据传递给页面组件
+  };
+}
+
+export default function BlogPost({ post }) {
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+    </article>
+  );
+}
+```
+
+#### **2. 特点**
+
+-   `getServerSideProps` 会在每次请求时执行，返回的数据直接作为页面的 `props`。
+-   页面在服务端完成渲染后，将 HTML 返回给浏览器。
+
+----------
+
+### **解决了什么问题？**
+
+1.  **动态数据实时性：**
+    
+    -   SSR 可以在每次请求时动态获取数据，适合需要频繁更新或依赖用户输入的场景。
+2.  **SEO 优化：**
+    
+    -   搜索引擎可以直接抓取完整的 HTML 页面，而不需要等待 JavaScript 加载和执行。
+3.  **首次加载性能：**
+    
+    -   页面在服务器上已经渲染完成，浏览器接收到的 HTML 是完整的，减少了首屏渲染时间。
+4.  **统一的渲染环境：**
+    
+    -   数据获取逻辑在服务端运行，可以避免客户端与服务端数据不一致的问题。
+
+----------
+
+### **有没有替代方案？**
+
+1.  **静态生成 (Static Site Generation, SSG)：**
+    
+    -   页面在构建时生成静态 HTML 文件。
+    -   优点：性能更高，适合内容不频繁变化的场景。
+    -   缺点：无法实时更新数据。
+2.  **客户端渲染 (Client-Side Rendering, CSR)：**
+    
+    -   页面初始加载是空的，通过 JavaScript 在客户端获取数据并渲染页面。
+    -   优点：无需服务器支持，动态交互性强。
+    -   缺点：SEO 较差，首屏渲染时间较长。
+3.  **增量静态生成 (Incremental Static Regeneration, ISR)：**
+    
+    -   在 SSG 基础上支持动态更新，允许后台重新生成部分页面。
+    -   优点：性能接近 SSG，同时支持动态数据。
+
+----------
+
+### **好处是什么？**
+
+1.  **实时数据支持：**
+    
+    -   每次请求都会获取最新数据，适合需要实时更新的页面。
+2.  **更好的 SEO：**
+    
+    -   搜索引擎可以直接抓取完整的 HTML 页面内容，无需等待 JavaScript 执行。
+3.  **首屏渲染快：**
+    
+    -   用户收到的是完整的 HTML 页面，无需等待客户端渲染。
+4.  **灵活性高：**
+    
+    -   适合处理个性化内容、用户权限控制等需要动态生成页面的场景。
+
+----------
+
+### **使用场景是什么？**
+
+1.  **电商网站：**
+    
+    -   商品详情页、购物车等需要实时展示最新库存和价格。
+2.  **个性化内容：**
+    
+    -   用户主页、推荐内容等需要根据用户身份动态生成。
+3.  **数据频繁更新的页面：**
+    
+    -   新闻网站、社交媒体、动态数据仪表盘。
+4.  **SEO 要求高的动态页面：**
+    
+    -   营销页面、文章页面。
+
+----------
+
+### **原理是什么？**
+
+1.  **客户端请求：**
+    
+    -   当用户请求页面时，浏览器向服务器发送 HTTP 请求。
+2.  **服务端处理：**
+    
+    -   服务器执行 `getServerSideProps`，获取页面所需的数据。
+    -   将数据与 React 组件结合，生成完整的 HTML。
+3.  **返回 HTML：**
+    
+    -   服务器将生成的 HTML 页面返回给浏览器。
+4.  **客户端接管：**
+    
+    -   页面加载后，React 在客户端启动，将页面变为可交互。
+
+----------
+
+### **SSR 的缺点**
+
+1.  **服务器性能开销大：**
+    
+    -   每次请求都需要动态生成页面，对服务器资源消耗较大。
+2.  **页面加载延迟：**
+    
+    -   相比 SSG，SSR 会增加服务器响应时间，尤其在复杂数据处理场景下。
+3.  **实现难度较高：**
+    
+    -   需要在服务端和客户端之间共享数据逻辑，增加代码复杂性。
+
+----------
+
+### **总结**
+
+服务器端渲染（SSR）是一个动态渲染解决方案，适合需要实时更新数据和高 SEO 要求的场景。虽然其性能不如 SSG，但凭借实时性和灵活性，成为动态页面和个性化内容的重要选择。结合增量静态生成（ISR），可以在性能和实时性之间找到更好的平衡。
+
+[返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODE5OTIzNywtNjc0OTcwNzQ4LC0yMz
-Q3NDgyNCwxMDA2MDY5NjU3LC03ODgzMjA1OTcsNDkyOTgwODkx
-LC03ODgzMjA1OTddfQ==
+eyJoaXN0b3J5IjpbMjI0NTc0OTIsLTY3NDk3MDc0OCwtMjM0Nz
+Q4MjQsMTAwNjA2OTY1NywtNzg4MzIwNTk3LDQ5Mjk4MDg5MSwt
+Nzg4MzIwNTk3XX0=
 -->
