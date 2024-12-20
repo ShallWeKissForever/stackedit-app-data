@@ -19,7 +19,7 @@
     -   [页面路由（基于文件系统的路由）](#页面路由（基于文件系统的路由）是什么？)
     -   [API 路由（创建后端 API）](#什么是-api-路由？)
     -   [静态生成 (Static Site Generation, SSG)](#什么是静态生成？) 和[服务器端渲染 (Server Side Rendering, SSR)](#什么是服务器端渲染？)
-    -   [动态路由](#什么是动态路由？)和动态页面渲染
+    -   [动态路由](#什么是动态路由？)和[动态页面渲染](#什么是动态页面渲染？)
 
 ----------
 
@@ -987,9 +987,183 @@ export default function UserPage({ id }) {
 动态路由是 Next.js 文件系统路由的重要特性，允许通过 URL 参数生成灵活的页面结构。它解决了传统手动配置路径的繁琐问题，特别适合处理动态内容的场景，如用户页面、文章详情页等。结合 Next.js 的数据获取方法，可以高效地实现动态内容的渲染，同时保持良好的性能和 SEO 效果。在复杂项目中，动态路由显得尤为重要，极大地简化了开发和维护工作。
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
+
+### **什么是动态页面渲染？**
+
+动态页面渲染是一种根据请求实时生成页面内容的渲染方式。页面内容可以基于用户输入、请求参数、数据库查询结果、API 响应等动态变化，而不是预先生成固定的静态内容。
+
+在 Next.js 中，动态页面渲染可以通过以下两种方式实现：
+
+1.  **服务器端渲染 (Server-Side Rendering, SSR)**：每次请求都由服务器生成 HTML。
+2.  **客户端渲染 (Client-Side Rendering, CSR)**：页面先加载基本结构，然后由客户端动态获取并渲染数据。
+
+----------
+
+### **怎么用动态页面渲染？**
+
+#### **1. 使用 SSR 实现动态渲染**
+
+Next.js 提供 `getServerSideProps` 方法，允许在服务器端根据每次请求动态生成页面内容。
+
+##### 示例：动态获取用户数据
+
+```javascript
+export async function getServerSideProps(context) {
+  const { id } = context.params; // 获取动态路由参数
+  const res = await fetch(`https://api.example.com/user/${id}`);
+  const user = await res.json();
+
+  return { props: { user } };
+}
+
+export default function UserPage({ user }) {
+  return (
+    <div>
+      <h1>{user.name}</h1>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+}
+```
+
+访问路径：`http://localhost:3000/user/123`
+
+每次请求都会动态获取用户数据并生成页面。
+
+----------
+
+#### **2. 使用 CSR 实现动态渲染**
+
+在客户端加载时，通过 `useEffect` 和 API 调用动态获取数据。
+
+##### 示例：客户端获取用户数据
+
+```javascript
+import { useState, useEffect } from 'react';
+
+export default function UserPage({ id }) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch(`/api/user/${id}`)
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, [id]);
+
+  if (!user) return <div>Loading...</div>;
+
+  return (
+    <div>
+      <h1>{user.name}</h1>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+}
+```
+
+----------
+
+### **解决了什么问题？**
+
+1.  **实时数据展示：**
+    
+    -   页面可以根据用户的请求动态展示最新的数据，比如个性化内容、搜索结果等。
+2.  **支持复杂业务逻辑：**
+    
+    -   动态渲染可以根据请求上下文（如用户身份、请求参数）生成不同的页面内容。
+3.  **避免生成过多静态页面：**
+    
+    -   对于动态内容无法提前生成或页面数量非常庞大的场景，动态渲染是更高效的选择。
+
+----------
+
+### **有没有替代方案？**
+
+1.  **静态生成 (Static Site Generation, SSG) + ISR：**
+    
+    -   使用 SSG 生成静态页面，并通过增量静态生成（ISR）定期更新页面。
+    -   优点：性能更高。
+    -   缺点：不适合需要实时更新的内容。
+2.  **完全客户端渲染 (CSR)：**
+    
+    -   页面在客户端加载后，通过 API 获取并渲染数据。
+    -   优点：简单易用，减少服务器负载。
+    -   缺点：首次加载时间长，SEO 不友好。
+3.  **混合模式：**
+    
+    -   部分内容通过 SSG 渲染，其他部分通过客户端动态加载。
+    -   优点：兼顾性能和动态性。
+    -   缺点：开发复杂度较高。
+
+----------
+
+### **好处是什么？**
+
+1.  **灵活性：**
+    
+    -   页面内容可以基于请求动态生成，适应复杂业务场景。
+2.  **个性化支持：**
+    
+    -   动态渲染允许根据用户身份、行为等生成定制化页面。
+3.  **实时性：**
+    
+    -   每次请求都可以获取最新的数据，保证页面内容的实时更新。
+4.  **兼容 SEO：**
+    
+    -   使用 SSR 动态渲染的页面，搜索引擎能够抓取完整的 HTML。
+5.  **减少静态生成负担：**
+    
+    -   无需提前生成大量静态页面，节省构建时间和存储空间。
+
+----------
+
+### **使用场景是什么？**
+
+1.  **用户个性化页面：**
+    
+    -   例如用户仪表盘、个人主页等，根据用户身份动态生成内容。
+2.  **实时数据展示：**
+    
+    -   例如股票行情、新闻、动态更新的排行榜。
+3.  **内容管理系统 (CMS)：**
+    
+    -   动态渲染从后台获取的内容，例如博客文章、产品详情页。
+4.  **带筛选和搜索功能的页面：**
+    
+    -   动态生成根据筛选条件或搜索关键词匹配的内容。
+5.  **需要身份验证的页面：**
+    
+    -   根据用户身份动态生成安全页面。
+
+----------
+
+### **原理是什么？**
+
+1.  **服务器端渲染 (SSR)：**
+    
+    -   每次请求都由服务器动态运行组件代码，生成完整的 HTML 页面返回给浏览器。
+    -   工作流程：
+        1.  客户端发起请求。
+        2.  服务器运行 `getServerSideProps` 等方法获取数据。
+        3.  服务器生成 HTML 返回给客户端。
+2.  **客户端渲染 (CSR)：**
+    
+    -   页面先加载基本的 HTML 和 JavaScript 文件，后续通过 API 获取数据并更新页面。
+    -   工作流程：
+        1.  浏览器加载初始页面结构（通常为空或基本占位符）。
+        2.  JavaScript 脚本运行，调用 API 获取数据。
+        3.  数据返回后，客户端更新页面内容。
+
+----------
+
+### **总结**
+
+动态页面渲染是构建灵活、高效、实时更新的 Web 应用的重要技术。Next.js 提供了多种动态渲染方式，支持从服务器端到客户端的全面实现。在需要个性化、实时数据更新或处理复杂业务逻辑的场景中，动态页面渲染可以很好地满足需求，同时兼顾性能和 SEO。开发者可以根据具体需求选择 SSR 或 CSR，甚至结合静态生成（SSG）进行优化。
+
+[返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MzgxMTU2MSwxOTI0OTcyMzk5LC0xMD
-IxMzc3ODE1LC00MjQzNDk2OCwtNjc0OTcwNzQ4LC0yMzQ3NDgy
-NCwxMDA2MDY5NjU3LC03ODgzMjA1OTcsNDkyOTgwODkxLC03OD
-gzMjA1OTddfQ==
+eyJoaXN0b3J5IjpbMjAzNzkxNjAwMiwxMzUzODExNTYxLDE5Mj
+Q5NzIzOTksLTEwMjEzNzc4MTUsLTQyNDM0OTY4LC02NzQ5NzA3
+NDgsLTIzNDc0ODI0LDEwMDYwNjk2NTcsLTc4ODMyMDU5Nyw0OT
+I5ODA4OTEsLTc4ODMyMDU5N119
 -->
