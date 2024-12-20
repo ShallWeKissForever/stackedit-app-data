@@ -19,7 +19,7 @@
     -   [页面路由（基于文件系统的路由）](#页面路由（基于文件系统的路由）是什么？)
     -   [API 路由（创建后端 API）](#什么是-api-路由？)
     -   [静态生成 (Static Site Generation, SSG)](#什么是静态生成？) 和[服务器端渲染 (Server Side Rendering, SSR)](#什么是服务器端渲染？)
-    -   动态路由和动态页面渲染
+    -   [动态路由](#什么是动态路由？)和动态页面渲染
 
 ----------
 
@@ -827,8 +827,169 @@ export default async function handler(req, res) {
 API 路由是 Next.js 的一个强大功能，适合构建轻量级后端服务或快速开发原型。通过简单的文件系统路由机制，它解决了前后端分离开发中的协调问题，同时带来了高效的开发体验。在小型应用、动态数据处理或全栈项目中，API 路由是一种便捷的选择。对于复杂的后端需求，可以考虑使用独立后端框架或云函数替代。
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
+
+### **什么是动态路由？**
+
+动态路由是一种基于路径参数的路由机制，允许开发者创建灵活的 URL 结构。在动态路由中，路径的一部分可以是动态变化的参数，比如用户 ID、文章标题等。
+
+在 Next.js 中，动态路由通过文件系统路由实现：通过在文件名中使用方括号（`[]`），可以定义动态路由。例如，`[id].js` 表示路径中某一部分是动态参数。
+
+----------
+
+### **怎么用动态路由？**
+
+#### **1. 定义动态路由**
+
+在 `pages` 目录中创建文件，并在文件名中用方括号定义动态部分。
+
+##### 示例：用户页面
+
+```javascript
+// pages/user/[id].js
+export default function UserPage({ id }) {
+  return <div>User ID: {id}</div>;
+}
+```
+
+访问路径：`http://localhost:3000/user/123`
+
+#### **2. 获取动态参数**
+
+动态参数通过 `query` 或 Next.js 提供的 `getStaticProps` / `getServerSideProps` 方法获取。
+
+##### 示例：使用 `useRouter` 获取动态参数
+
+```javascript
+import { useRouter } from 'next/router';
+
+export default function UserPage() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  return <div>User ID: {id}</div>;
+}
+```
+
+##### 示例：在 `getStaticProps` 中获取参数
+
+```javascript
+export async function getStaticProps(context) {
+  const { id } = context.params; // 获取动态路由参数
+  return { props: { id } };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { id: '123' } }, { params: { id: '456' } }],
+    fallback: false,
+  };
+}
+
+export default function UserPage({ id }) {
+  return <div>User ID: {id}</div>;
+}
+```
+
+----------
+
+### **解决了什么问题？**
+
+1.  **动态内容支持：**
+    
+    -   允许为每个动态资源（如用户、文章等）生成独立页面，而无需手动创建静态文件。
+2.  **提高开发效率：**
+    
+    -   不需要为每个可能的路由编写单独的页面代码。
+3.  **灵活的 URL 结构：**
+    
+    -   可以轻松支持带参数的路径，如 `/product/[id]`、`/blog/[slug]`。
+4.  **SEO 支持：**
+    
+    -   动态生成的页面可以被搜索引擎索引，提高网站的可见性。
+
+----------
+
+### **有没有替代方案？**
+
+1.  **Query 参数：**
+    
+    -   使用 `?key=value` 的方式传递参数，而非动态路由。
+    -   示例：`http://localhost:3000/user?id=123`
+    -   缺点：对 SEO 不友好，且 URL 可读性较差。
+2.  **固定路由：**
+    
+    -   为每个动态路径手动创建一个页面文件。
+    -   缺点：当路径数量较多时，维护成本极高。
+3.  **客户端处理路由：**
+    
+    -   使用 React Router 等客户端路由库手动解析路径。
+    -   缺点：增加了开发复杂度，无法利用 Next.js 的文件系统路由。
+
+----------
+
+### **好处是什么？**
+
+1.  **高效的页面生成：**
+    
+    -   动态路由结合 `getStaticProps` 或 `getServerSideProps`，可以实现高效的数据加载和页面渲染。
+2.  **URL 结构清晰：**
+    
+    -   动态参数嵌入路径，提升用户体验和 SEO 效果。
+3.  **代码简洁：**
+    
+    -   不需要为每个动态资源写独立页面代码。
+4.  **与 Next.js 功能深度集成：**
+    
+    -   动态路由直接支持静态生成（SSG）、服务器端渲染（SSR）等特性。
+
+----------
+
+### **使用场景是什么？**
+
+1.  **用户页面：**
+    
+    -   URL 示例：`/user/[id]`
+    -   应用：显示用户的个人资料。
+2.  **文章详情页：**
+    
+    -   URL 示例：`/blog/[slug]`
+    -   应用：根据文章标题或 ID 显示详细内容。
+3.  **产品页面：**
+    
+    -   URL 示例：`/product/[id]`
+    -   应用：根据产品 ID 显示详细信息。
+4.  **分类页面：**
+    
+    -   URL 示例：`/category/[name]`
+    -   应用：按分类显示相关内容。
+
+----------
+
+### **原理是什么？**
+
+1.  **文件系统映射：**
+    
+    -   Next.js 使用文件系统路由，将 `pages` 目录下的文件自动映射为路由。
+2.  **动态参数解析：**
+    
+    -   当用户请求动态路径（如 `/user/123`）时，Next.js 根据文件名（如 `[id].js`）解析路径中的参数，并将其作为 `query` 提供给页面。
+3.  **数据获取整合：**
+    
+    -   动态路由可以结合 `getStaticProps` 或 `getServerSideProps` 获取数据，为页面提供动态内容。
+4.  **SEO 优化：**
+    
+    -   Next.js 生成的动态路由页面可以通过服务端渲染或静态生成，使搜索引擎直接抓取完整的 HTML 内容。
+
+----------
+
+### **总结**
+
+动态路由是 Next.js 文件系统路由的重要特性，允许通过 URL 参数生成灵活的页面结构。它解决了传统手动配置路径的繁琐问题，特别适合处理动态内容的场景，如用户页面、文章详情页等。结合 Next.js 的数据获取方法，可以高效地实现动态内容的渲染，同时保持良好的性能和 SEO 效果。在复杂项目中，动态路由显得尤为重要，极大地简化了开发和维护工作。
+
+[返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDk3MjM5OSwtMTAyMTM3NzgxNSwtND
-I0MzQ5NjgsLTY3NDk3MDc0OCwtMjM0NzQ4MjQsMTAwNjA2OTY1
-NywtNzg4MzIwNTk3LDQ5Mjk4MDg5MSwtNzg4MzIwNTk3XX0=
+eyJoaXN0b3J5IjpbMTM1MzgxMTU2MSwxOTI0OTcyMzk5LC0xMD
+IxMzc3ODE1LC00MjQzNDk2OCwtNjc0OTcwNzQ4LC0yMzQ3NDgy
+NCwxMDA2MDY5NjU3LC03ODgzMjA1OTcsNDkyOTgwODkxLC03OD
+gzMjA1OTddfQ==
 -->
