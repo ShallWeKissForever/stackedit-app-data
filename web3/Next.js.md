@@ -26,7 +26,7 @@
 ### **2. 核心功能**
 
 -   **数据获取**  
-    学习 `getStaticProps`、`getServerSideProps` 和 `getStaticPaths` 的用法，以及如何选择适合的渲染模式。
+    学习 `getStaticProps`、`getStaticPaths` 和 `getServerSideProps` 的用法，以及如何选择适合的渲染模式。
     
 -   **页面导航**  
     使用 `next/link` 和 `useRouter` 实现页面跳转和动态导航。
@@ -473,7 +473,7 @@ export async function getStaticPaths() {
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NjkzODIyNSwtNjc0OTcwNzQ4LC0yMz
+eyJoaXN0b3J5IjpbMTQ1ODE5OTIzNywtNjc0OTcwNzQ4LC0yMz
 Q3NDgyNCwxMDA2MDY5NjU3LC03ODgzMjA1OTcsNDkyOTgwODkx
 LC03ODgzMjA1OTddfQ==
 -->
