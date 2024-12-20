@@ -625,8 +625,210 @@ export default function BlogPost({ post }) {
 服务器端渲染（SSR）是一个动态渲染解决方案，适合需要实时更新数据和高 SEO 要求的场景。虽然其性能不如 SSG，但凭借实时性和灵活性，成为动态页面和个性化内容的重要选择。结合增量静态生成（ISR），可以在性能和实时性之间找到更好的平衡。
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
+
+### **什么是 API 路由？**
+
+API 路由是 Next.js 提供的一种功能，用于在同一个项目中创建后端 API。通过文件系统路由机制，每个 API 文件对应一个端点 (endpoint)，允许开发者直接定义后端逻辑，供前端或其他客户端调用。
+
+API 路由的本质是服务端的代码，运行在 Node.js 环境下，它可以处理请求、访问数据库、调用第三方 API，或进行其他后端操作。
+
+----------
+
+### **怎么用 API 路由？**
+
+#### **1. 创建 API 路由**
+
+在 Next.js 项目中，所有放置在 `pages/api` 目录下的文件都被自动映射为 API 路由。
+
+##### 示例：创建简单的 API
+
+```javascript
+// pages/api/hello.js
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Hello, Next.js API!' });
+}
+```
+
+-   访问路径：`http://localhost:3000/api/hello`
+-   返回结果：
+
+```json
+{
+  "message": "Hello, Next.js API!"
+}
+```
+
+#### **2. 请求方法处理**
+
+通过 `req.method` 判断请求类型（如 GET、POST、PUT、DELETE 等）。
+
+##### 示例：处理不同的请求方法
+
+```javascript
+// pages/api/user.js
+export default function handler(req, res) {
+  if (req.method === 'GET') {
+    res.status(200).json({ message: 'Fetching user data' });
+  } else if (req.method === 'POST') {
+    const data = req.body; // 假设前端发送 JSON 数据
+    res.status(201).json({ message: 'User created', data });
+  } else {
+    res.setHeader('Allow', ['GET', 'POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+}
+```
+
+#### **3. 动态路由**
+
+可以通过文件名中的方括号定义动态路由。
+
+##### 示例：动态用户 API
+
+```javascript
+// pages/api/user/[id].js
+export default function handler(req, res) {
+  const { id } = req.query; // 获取动态参数
+  res.status(200).json({ message: `Fetching data for user ${id}` });
+}
+```
+
+-   访问路径：`http://localhost:3000/api/user/123`
+-   返回结果：
+
+```json
+{
+  "message": "Fetching data for user 123"
+}
+```
+
+#### **4. 中间件与第三方服务**
+
+可以集成数据库、身份验证、日志等逻辑。
+
+```javascript
+import db from '../../lib/db'; // 假设有数据库连接模块
+
+// pages/api/posts.js
+export default async function handler(req, res) {
+  if (req.method === 'GET') {
+    const posts = await db.getPosts();
+    res.status(200).json(posts);
+  } else {
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+}
+```
+
+----------
+
+### **解决了什么问题？**
+
+1.  **全栈开发：**
+    
+    -   前后端在一个项目中整合，减少了开发复杂度和沟通成本。
+2.  **快速原型开发：**
+    
+    -   无需设置单独的后端服务器，直接在项目中定义 API。
+3.  **统一部署：**
+    
+    -   API 路由和前端页面可以一起部署到 Vercel 或其他支持 Serverless 的平台。
+4.  **便捷的动态逻辑：**
+    
+    -   支持动态路由、身份验证、数据处理等操作，无需引入额外框架。
+5.  **与 Next.js 的无缝集成：**
+    
+    -   API 路由可轻松与 SSR 和前端页面共享逻辑，如数据库访问层。
+
+----------
+
+### **有没有替代方案？**
+
+1.  **独立后端服务：**
+    
+    -   使用 Express.js、Nest.js、Koa 等框架构建单独的后端服务。
+    -   优点：适合复杂的后端需求，具备更高的灵活性。
+    -   缺点：需要独立的部署和维护。
+2.  **云函数 (Serverless Functions)：**
+    
+    -   使用 AWS Lambda、Vercel Functions 或 Netlify Functions。
+    -   优点：按需触发、自动扩展，无需维护服务器。
+    -   缺点：冷启动可能增加延迟。
+3.  **GraphQL：**
+    
+    -   通过 Apollo Server 或其他工具构建灵活的 GraphQL API。
+    -   优点：客户端可以按需查询数据，避免冗余。
+    -   缺点：初学者上手较复杂。
+
+----------
+
+### **好处是什么？**
+
+1.  **开发效率高：**
+    
+    -   同一项目即可定义后端 API，无需额外配置。
+2.  **简单易用：**
+    
+    -   基于文件系统的路由，开发者专注于功能逻辑。
+3.  **节省资源：**
+    
+    -   不需要额外的服务器或后端部署，只需运行 Next.js 项目即可。
+4.  **自动优化：**
+    
+    -   支持自动热更新和 TypeScript 等特性。
+5.  **灵活扩展：**
+    
+    -   轻松与数据库、第三方服务、身份验证系统集成。
+
+----------
+
+### **使用场景是什么？**
+
+1.  **小型到中型应用：**
+    
+    -   API 逻辑较简单，不需要专门的后端。
+2.  **原型开发：**
+    
+    -   快速验证产品概念或功能。
+3.  **全栈应用：**
+    
+    -   前后端完全整合在一个项目中，例如博客、个人网站。
+4.  **动态数据处理：**
+    
+    -   需要动态生成内容的场景，例如表单提交、用户认证。
+5.  **与前端配合的后端逻辑：**
+    
+    -   处理用户数据、API 聚合或直接与数据库交互。
+
+----------
+
+### **原理是什么？**
+
+1.  **文件系统路由：**
+    
+    -   `pages/api` 目录中的每个文件会映射为一个 HTTP API 路由，动态文件名映射为动态路径。
+2.  **Node.js 环境：**
+    
+    -   API 路由运行在服务器端，使用 Node.js 提供的功能。
+3.  **无状态架构：**
+    
+    -   每个 API 调用是无状态的，适合 Serverless 部署架构。
+4.  **请求与响应：**
+    
+    -   API 路由接收 HTTP 请求，解析 `req` 和 `res`，并返回 JSON 数据或其他内容。
+5.  **与 Next.js 集成：**
+    
+    -   与页面路由共享运行时环境，可直接访问共享代码（如数据库连接模块）。
+
+----------
+
+### **总结**
+
+API 路由是 Next.js 的一个强大功能，适合构建轻量级后端服务或快速开发原型。通过简单的文件系统路由机制，它解决了前后端分离开发中的协调问题，同时带来了高效的开发体验。在小型应用、动态数据处理或全栈项目中，API 路由是一种便捷的选择。对于复杂的后端需求，可以考虑使用独立后端框架或云函数替代。
+
+[返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDM0OTY4LC02NzQ5NzA3NDgsLTIzND
-c0ODI0LDEwMDYwNjk2NTcsLTc4ODMyMDU5Nyw0OTI5ODA4OTEs
-LTc4ODMyMDU5N119
+eyJoaXN0b3J5IjpbMTY4MDI3NTE0NywtNDI0MzQ5NjgsLTY3ND
+k3MDc0OCwtMjM0NzQ4MjQsMTAwNjA2OTY1NywtNzg4MzIwNTk3
+LDQ5Mjk4MDg5MSwtNzg4MzIwNTk3XX0=
 -->
