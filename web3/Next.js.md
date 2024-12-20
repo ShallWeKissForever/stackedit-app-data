@@ -14,7 +14,7 @@
     
 -   **Next.js 基本概念**
     
-    -   页面路由（基于文件系统的路由）
+    -   [页面路由（基于文件系统的路由）](#yemianluyou)
     -   API 路由（创建后端 API）
     -   静态生成 (Static Site Generation, SSG) 和服务器端渲染 (Server Side Rendering, SSR)
     -   动态路由和动态页面渲染
@@ -296,6 +296,6 @@
 
 基于文件系统的页面路由是 Next.js 的一大特点，它通过简化路由配置、提升开发效率、增强代码可读性，成为现代全栈开发中的重要工具。适用于快速开发、SEO 优化和动态路由需求，尤其适合全栈和前后端一体化的项目。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUxODY2NDY4LC03ODgzMjA1OTcsNDkyOT
-gwODkxLC03ODgzMjA1OTddfQ==
+eyJoaXN0b3J5IjpbMTc3OTU3NTE2MSwtNzg4MzIwNTk3LDQ5Mj
+k4MDg5MSwtNzg4MzIwNTk3XX0=
 -->
