@@ -18,7 +18,7 @@
     
     -   [页面路由（基于文件系统的路由）](#页面路由（基于文件系统的路由）是什么？)
     -   API 路由（创建后端 API）
-    -   [静态生成 (Static Site Generation, SSG)](#%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E7%94%9F%E6%88%90%20%28Static%20Site%20Generation,%20SSG%29?) 和服务器端渲染 (Server Side Rendering, SSR)
+    -   [静态生成 (Static Site Generation, SSG)](#什么是静态生成?) 和服务器端渲染 (Server Side Rendering, SSR)
     -   动态路由和动态页面渲染
 
 ----------
@@ -302,7 +302,7 @@
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 
-### **什么是静态生成 (Static Site Generation, SSG)?**
+### **什么是静态生成?**
 
 静态生成（SSG）是 Next.js 提供的一种预渲染方式，在**构建时**生成 HTML 文件。生成的静态页面在用户访问时直接提供，不需要再运行服务器逻辑，因而具有更快的加载速度和更好的性能。
 
@@ -537,7 +537,7 @@ ISR
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjgzMzY1MDAsLTIzNDc0ODI0LDEwMD
-YwNjk2NTcsLTc4ODMyMDU5Nyw0OTI5ODA4OTEsLTc4ODMyMDU5
-N119
+eyJoaXN0b3J5IjpbMjQ0MDIwOTY0LC0yMzQ3NDgyNCwxMDA2MD
+Y5NjU3LC03ODgzMjA1OTcsNDkyOTgwODkxLC03ODgzMjA1OTdd
+fQ==
 -->
