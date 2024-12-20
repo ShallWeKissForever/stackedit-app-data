@@ -310,7 +310,7 @@ SSG 是现代 Jamstack 架构的核心，适合内容相对静态、不需要频
 
 ----------
 
-### **怎么用 SSG?**
+### **怎么用 SSG？**
 
 在 Next.js 中，使用 `getStaticProps` 或 `getStaticPaths` 实现静态生成。
 
@@ -537,7 +537,7 @@ ISR
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2ODE0ODMxNiwtMjM0NzQ4MjQsMTAwNj
+eyJoaXN0b3J5IjpbLTY3NDk3MDc0OCwtMjM0NzQ4MjQsMTAwNj
 A2OTY1NywtNzg4MzIwNTk3LDQ5Mjk4MDg5MSwtNzg4MzIwNTk3
 XX0=
 -->
