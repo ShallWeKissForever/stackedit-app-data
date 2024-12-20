@@ -18,7 +18,7 @@
     
     -   [页面路由（基于文件系统的路由）](#页面路由（基于文件系统的路由）是什么？)
     -   API 路由（创建后端 API）
-    -   静态生成 (Static Site Generation, SSG) 和服务器端渲染 (Server Side Rendering, SSR)
+    -   [静态生成 (Static Site Generation, SSG)](#%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81%E7%94%9F%E6%88%90%20%28Static%20Site%20Generation,%20SSG%29?) 和服务器端渲染 (Server Side Rendering, SSR)
     -   动态路由和动态页面渲染
 
 ----------
@@ -301,7 +301,243 @@
 基于文件系统的页面路由是 Next.js 的一大特点，它通过简化路由配置、提升开发效率、增强代码可读性，成为现代全栈开发中的重要工具。适用于快速开发、SEO 优化和动态路由需求，尤其适合全栈和前后端一体化的项目。
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
+
+### **什么是静态生成 (Static Site Generation, SSG)?**
+
+静态生成（SSG）是 Next.js 提供的一种预渲染方式，在**构建时**生成 HTML 文件。生成的静态页面在用户访问时直接提供，不需要再运行服务器逻辑，因而具有更快的加载速度和更好的性能。
+
+SSG 是现代 Jamstack 架构的核心，适合内容相对静态、不需要频繁更新的页面。
+
+----------
+
+### **怎么用 SSG?**
+
+在 Next.js 中，使用 `getStaticProps` 或 `getStaticPaths` 实现静态生成。
+
+#### **1. 基础用法：`getStaticProps`**
+
+`getStaticProps` 是一个运行在构建时的函数，用于获取页面的静态数据。
+
+```javascript
+// pages/blog/[id].js
+export async function getStaticProps(context) {
+  const { id } = context.params;
+  const res = await fetch(`https://api.example.com/blog/${id}`);
+  const post = await res.json();
+
+  return {
+    props: { post }, // 作为页面组件的 props
+  };
+}
+
+export default function BlogPost({ post }) {
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+    </article>
+  );
+}
+```
+
+#### **2. 动态路由：`getStaticPaths`**
+
+当页面使用动态路由时，需要通过 `getStaticPaths` 指定需要生成的路径。
+
+```javascript
+export async function getStaticPaths() {
+  const res = await fetch('https://api.example.com/blog');
+  const posts = await res.json();
+
+  const paths = posts.map((post) => ({
+    params: { id: post.id.toString() },
+  }));
+
+  return { paths, fallback: false }; // fallback 控制未定义路径的处理
+}
+```
+
+#### **结合使用**
+
+```javascript
+export async function getStaticProps({ params }) {
+  const res = await fetch(`https://api.example.com/blog/${params.id}`);
+  const post = await res.json();
+
+  return { props: { post } };
+}
+
+export async function getStaticPaths() {
+  const res = await fetch('https://api.example.com/blog');
+  const posts = await res.json();
+
+  const paths = posts.map((post) => ({
+    params: { id: post.id.toString() },
+  }));
+
+  return { paths, fallback: false };
+}
+```
+
+----------
+
+### **解决了什么问题？**
+
+1.  **提升性能：**
+    
+    -   通过构建时生成静态 HTML 文件，用户无需等待服务器生成页面，大大缩短响应时间。
+2.  **SEO 优化：**
+    
+    -   由于页面在构建时生成完整 HTML 文件，搜索引擎可以直接抓取内容。
+3.  **减少服务器负载：**
+    
+    -   静态文件由 CDN 分发，减少了对服务器的依赖，适合高流量的场景。
+4.  **快速交付：**
+    
+    -   HTML 文件直接部署到 CDN，无需复杂的后端配置。
+
+----------
+
+### **有没有替代方案？**
+
+1.  **服务器端渲染 (Server-Side Rendering, SSR)**：
+    
+    -   在每次请求时动态生成页面。
+    -   适用于需要实时数据的场景。
+    -   使用 `getServerSideProps`。
+2.  **客户端渲染 (Client-Side Rendering, CSR)**：
+    
+    -   页面初始加载是空的，通过 JavaScript 动态获取数据并渲染。
+    -   适用于需要交互性强或不需要 SEO 优化的场景。
+3.  **增量静态生成 (Incremental Static Regeneration, ISR)**：
+    
+    -   是 SSG 的增强版，允许部分页面在后台增量更新，支持更灵活的动态内容。
+    -   通过设置 `revalidate`。
+
+----------
+
+### **好处是什么？**
+
+1.  **性能高：**
+    
+    -   静态文件由 CDN 提供，访问速度极快。
+2.  **安全性强：**
+    
+    -   没有运行服务器端逻辑，减少潜在的安全风险。
+3.  **易于扩展：**
+    
+    -   静态页面可以轻松扩展至全球，通过 CDN 提供服务。
+4.  **开发简单：**
+    
+    -   开发者专注于页面内容，不必管理复杂的后端服务。
+
+----------
+
+### **使用场景是什么？**
+
+1.  **博客和文档：**
+    
+    -   内容不频繁变化，适合静态生成以提升加载速度。
+2.  **营销网站：**
+    
+    -   静态生成的页面可以快速交付并优化 SEO。
+3.  **电商产品页面：**
+    
+    -   固定的产品详情页，适合使用 SSG 提高性能。
+4.  **活动页面或展示页面：**
+    
+    -   内容固定的活动宣传或作品展示网站。
+
+----------
+
+### **原理是什么？**
+
+1.  **构建时生成静态 HTML 文件**：
+    
+    -   Next.js 在构建时执行 `getStaticProps` 和 `getStaticPaths` 获取数据，并生成对应的 HTML 文件。
+2.  **部署静态文件**：
+    
+    -   构建后的静态文件（HTML、CSS、JS 等）被部署到 CDN 或静态服务器。
+3.  **请求时直接返回静态内容**：
+    
+    -   用户请求时，CDN 直接提供生成好的 HTML 页面，加载速度非常快。
+4.  **结合增量更新**：
+    
+    -   如果启用增量静态生成（ISR），Next.js 会在后台重新生成更新的页面，同时不会影响用户的访问。
+
+----------
+
+### **SSG 与其他渲染方式对比**
+
+特性
+
+SSG
+
+SSR
+
+CSR
+
+ISR
+
+**渲染时间**
+
+构建时生成
+
+请求时生成
+
+客户端生成
+
+构建时生成 + 后台更新
+
+**性能**
+
+非常高（CDN 支持）
+
+中等（依赖服务器性能）
+
+较低（依赖客户端渲染速度）
+
+接近 SSG，后台增量更新性能稍低
+
+**SEO 支持**
+
+非常好
+
+非常好
+
+较差
+
+非常好
+
+**动态数据支持**
+
+支持有限（需重新构建）
+
+完全支持
+
+完全支持
+
+动态支持（通过后台增量更新）
+
+**复杂性**
+
+低
+
+中等
+
+低
+
+中等
+
+----------
+
+### **总结**
+
+静态生成（SSG）是一种高效的页面渲染方式，适合内容静态或更新频率较低的场景。结合增量静态生成（ISR），SSG 可以在保证性能的同时，支持动态更新需求。对于需要快速交付、提升 SEO 和性能的应用，SSG 是一种非常合适的选择。
+
+[返回目录](#%E7%9B%AE%E5%BD%95)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNDc0ODI0LDEwMDYwNjk2NTcsLTc4OD
-MyMDU5Nyw0OTI5ODA4OTEsLTc4ODMyMDU5N119
+eyJoaXN0b3J5IjpbLTE5MjgzMzY1MDAsLTIzNDc0ODI0LDEwMD
+YwNjk2NTcsLTc4ODMyMDU5Nyw0OTI5ODA4OTEsLTc4ODMyMDU5
+N119
 -->
