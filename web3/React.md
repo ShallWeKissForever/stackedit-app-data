@@ -87,6 +87,10 @@ function Avatar({ person, size = 100 }) {
 现在， 如果 <Avatar person={...} /> 渲染时没有 size prop，  size 将被赋值为 100。
 
 默认值仅在缺少 size prop 或 size={undefined} 时生效。 但是如果你传递了 size={null} 或 size={0}，默认值将 不 被使用。
+# 在 JSX 中通过大括号使用 JavaScript
+-   在 JSX 的大括号内引用 JavaScript 变量
+-   在 JSX 的大括号内调用 JavaScript 函数
+-   在 JSX 的大括号内使用 JavaScript 对象
 
 # 条件渲染
 你可以认为，_“如果 `isPacked` 为 true 时，则（`?`）渲染 `name + ' ✅'`，否则（`:`）渲染 `name`。”_
@@ -133,6 +137,7 @@ function Item({ name, isPacked }) {
 -   努力在你返回的 JSX 中表达你的组件逻辑。当你需要“改变事物”时，你通常希望在事件处理程序中进行。作为最后的手段，你可以使用 `useEffect`。
 -   编写纯函数需要一些练习，但它充分释放了 React 范式的能力。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMzQwODA5MCw5NTI1MjY4MDksNjQ4Mz
-UyNzkzLDIxMzg1NzIxMTQsNDAzMzE2NTM2XX0=
+eyJoaXN0b3J5IjpbNzIzMTg5NzIzLC04MDM0MDgwOTAsOTUyNT
+I2ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
+
 -->
