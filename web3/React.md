@@ -124,8 +124,15 @@ function Item({ name, isPacked }) {
 >JavaScript 会自动将左侧的值转换成布尔类型以判断条件成立与否。然而，如果左侧是 `0`，整个表达式将变成左侧的值（`0`），React 此时则会渲染 `0` 而不是不进行渲染。
 >例如，一个常见的错误是 `messageCount && <p>New messages</p>`。其原本是想当 `messageCount` 为 0 的时候不进行渲染，但实际上却渲染了 `0`。
 >为了更正，可以将左侧的值改成布尔类型：`messageCount > 0 && <p>New messages</p>`。
-
+# 保持组件纯粹
+-   一个组件必须是纯粹的，就意味着：
+    -   **只负责自己的任务。** 它不会更改在该函数调用前就已存在的对象或变量。
+    -   **输入相同，则输出相同。** 给定相同的输入，组件应该总是返回相同的 JSX。
+-   渲染随时可能发生，因此组件不应依赖于彼此的渲染顺序。
+-   你不应该改变任何用于组件渲染的输入。这包括 props、state 和 context。通过 “设置” state来更新界面，而不要改变预先存在的对象。
+-   努力在你返回的 JSX 中表达你的组件逻辑。当你需要“改变事物”时，你通常希望在事件处理程序中进行。作为最后的手段，你可以使用 `useEffect`。
+-   编写纯函数需要一些练习，但它充分释放了 React 范式的能力。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyNTI2ODA5LDY0ODM1Mjc5MywyMTM4NT
-cyMTE0LDQwMzMxNjUzNl19
+eyJoaXN0b3J5IjpbMjUyMjExMzgxLDk1MjUyNjgwOSw2NDgzNT
+I3OTMsMjEzODU3MjExNCw0MDMzMTY1MzZdfQ==
 -->
