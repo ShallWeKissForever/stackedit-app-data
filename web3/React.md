@@ -14,7 +14,7 @@
 当使用默认导入时，你可以在 `import` 语句后面进行任意命名。比如 `import Banana from './Button.js'`，如此你能获得与默认导出一致的内容。相反，对于具名导入，导入和导出的名字必须一致。这也是称其为 **具名** 导入的原因！
 
 # 将 Props 传递给组件
-### 步骤 1: 将 props 传递给子组件[](https://zh-hans.react.dev/learn/passing-props-to-a-component#step-1-pass-props-to-the-child-component "Link for 步骤 1: 将 props 传递给子组件 ")
+## 步骤 1: 将 props 传递给子组件[](https://zh-hans.react.dev/learn/passing-props-to-a-component#step-1-pass-props-to-the-child-component "Link for 步骤 1: 将 props 传递给子组件 ")
 
 首先，将一些 props 传递给 `Avatar`。例如，让我们传递两个 props：`person`（一个对象）和 `size`（一个数字）：
 
@@ -31,7 +31,7 @@ export default function Profile() {
 
 现在，你可以在 `Avatar` 组件中读取这些 props 了。
 
-### 步骤 2: 在子组件中读取 props[](https://zh-hans.react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component "Link for 步骤 2: 在子组件中读取 props ")
+## 步骤 2: 在子组件中读取 props[](https://zh-hans.react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component "Link for 步骤 2: 在子组件中读取 props ")
 
 你可以通过在 `function Avatar` 之后直接列出它们的名字 `person, size` 来读取这些 props。这些 props 在 `({` 和 `})` 之间，并由逗号分隔。这样，你可以在 `Avatar` 的代码中使用它们，就像使用变量一样。
 
@@ -77,7 +77,7 @@ function Avatar(props) {
   // ...
 }
 ```
-# 给 prop 指定一个默认值 
+## 给 prop 指定一个默认值 
 如果你想在没有指定值的情况下给 prop 一个默认值，你可以通过在参数后面写 = 和默认值来进行解构：
 ```typescript
 function Avatar({ person, size = 100 }) {
@@ -88,8 +88,25 @@ function Avatar({ person, size = 100 }) {
 
 默认值仅在缺少 size prop 或 size={undefined} 时生效。 但是如果你传递了 size={null} 或 size={0}，默认值将 不 被使用。
 
-# 
+# 条件渲染
+你可以认为，_“如果 `isPacked` 为 true 时，则（`?`）渲染 `name + ' ✅'`，否则（`:`）渲染 `name`。”_
+你可以添加更多的换行和括号，以便在各种情况下更好地去嵌套 JSX：
+```typescript
+function Item({ name, isPacked }) {
+  return (
+    <li className="item">
+      {isPacked ? (
+        <del>
+          {name + ' ✅'}
+        </del>
+      ) : (
+        name
+      )}
+    </li>
+  );
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyOTUyMTY4NSwyMTM4NTcyMTE0LDQwMz
+eyJoaXN0b3J5IjpbLTYwMzI1MDU4NCwyMTM4NTcyMTE0LDQwMz
 MxNjUzNl19
 -->
