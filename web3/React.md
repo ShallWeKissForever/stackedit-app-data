@@ -62,6 +62,21 @@ function Avatar(props) {
 ```
 
 通常你不需要整个 `props` 对象，所以可以将它解构为单独的 props。
+
+在声明 props 时， 不要忘记 ( 和 ) 之间的一对花括号 { 和 }  ：
+```typescript
+function Avatar({ person, size }) {
+  // ...
+}
+```
+这种语法被称为 “解构”，等价于于从函数参数中读取属性：
+```typescript
+function Avatar(props) {
+  let person = props.person;
+  let size = props.size;
+  // ...
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjM1MTEyNzEsNDAzMzE2NTM2XX0=
+eyJoaXN0b3J5IjpbLTEwMTcxMzY3NTUsNDAzMzE2NTM2XX0=
 -->
