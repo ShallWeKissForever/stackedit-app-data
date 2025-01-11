@@ -18,16 +18,6 @@
 
 首先，将一些 props 传递给 `Avatar`。例如，让我们传递两个 props：`person`（一个对象）和 `size`（一个数字）：
 
-```
-
-```
-
-现在，你可以在 `Avatar` 组件中读取这些 props 了。
-
-### 步骤 2: 在子组件中读取 props[](https://zh-hans.react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component "Link for 步骤 2: 在子组件中读取 props ")
-
-你可以通过在 `function Avatar` 之后直接列出它们的名字 `person, size` 来读取这些 props。这些 props 在 `({` 和 `})` 之间，并由逗号分隔。这样，你可以在 `Avatar` 的代码中使用它们，就像使用变量一样。
-
 ```typescript
 export default function Profile() {  
 		return (  
@@ -39,7 +29,39 @@ export default function Profile() {
 }
 ```
 
+现在，你可以在 `Avatar` 组件中读取这些 props 了。
+
+### 步骤 2: 在子组件中读取 props[](https://zh-hans.react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component "Link for 步骤 2: 在子组件中读取 props ")
+
+你可以通过在 `function Avatar` 之后直接列出它们的名字 `person, size` 来读取这些 props。这些 props 在 `({` 和 `})` 之间，并由逗号分隔。这样，你可以在 `Avatar` 的代码中使用它们，就像使用变量一样。
+
+```typescript
+function Avatar({ person, size }) {
+  return (
+    <img
+      className="avatar"
+      src={getImageUrl(person)}
+      alt={person.name}
+      width={size}
+      height={size}
+    />
+  );
+}
+```
+
 向使用 `person` 和 `size` props 渲染的 `Avatar` 添加一些逻辑，你就完成了。
+
+你可以将 props 想象成可以调整的“旋钮”。它们的作用与函数的参数相同 —— 事实上，props **正是** 组件的唯一参数！ React 组件函数接受一个参数，一个 `props` 对象：
+
+```typescript
+function Avatar(props) {  
+	let person = props.person;  
+	let size = props.size;  
+	// ...  
+}
+```
+
+通常你不需要整个 `props` 对象，所以可以将它解构为单独的 props。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxMjc4NzYyLDQwMzMxNjUzNl19
+eyJoaXN0b3J5IjpbLTIxMjM1MTEyNzEsNDAzMzE2NTM2XX0=
 -->
