@@ -21,6 +21,25 @@
 ```
 
 ```
+
+现在，你可以在 `Avatar` 组件中读取这些 props 了。
+
+### 步骤 2: 在子组件中读取 props[](https://zh-hans.react.dev/learn/passing-props-to-a-component#step-2-read-props-inside-the-child-component "Link for 步骤 2: 在子组件中读取 props ")
+
+你可以通过在 `function Avatar` 之后直接列出它们的名字 `person, size` 来读取这些 props。这些 props 在 `({` 和 `})` 之间，并由逗号分隔。这样，你可以在 `Avatar` 的代码中使用它们，就像使用变量一样。
+
+```typescript
+export default function Profile() {  
+		return (  
+			<Avatar  
+				person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}  
+				size={100}  
+			/>  
+	);  
+}
+```
+
+向使用 `person` 和 `size` props 渲染的 `Avatar` 添加一些逻辑，你就完成了。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI4MDgxNzA1LDQwMzMxNjUzNl19
+eyJoaXN0b3J5IjpbOTgxMjc4NzYyLDQwMzMxNjUzNl19
 -->
