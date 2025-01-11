@@ -88,7 +88,8 @@ function Avatar({ person, size = 100 }) {
 
 默认值仅在缺少 size prop 或 size={undefined} 时生效。 但是如果你传递了 size={null} 或 size={0}，默认值将 不 被使用。
 
-
+# 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzODU3MjExNCw0MDMzMTY1MzZdfQ==
+eyJoaXN0b3J5IjpbMjAyOTUyMTY4NSwyMTM4NTcyMTE0LDQwMz
+MxNjUzNl19
 -->
