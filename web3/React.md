@@ -77,6 +77,18 @@ function Avatar(props) {
   // ...
 }
 ```
+# 给 prop 指定一个默认值 
+如果你想在没有指定值的情况下给 prop 一个默认值，你可以通过在参数后面写 = 和默认值来进行解构：
+```typescript
+function Avatar({ person, size = 100 }) {
+  // ...
+}
+```
+现在， 如果 <Avatar person={...} /> 渲染时没有 size prop，  size 将被赋值为 100。
+
+默认值仅在缺少 size prop 或 size={undefined} 时生效。 但是如果你传递了 size={null} 或 size={0}，默认值将 不 被使用。
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTcxMzY3NTUsNDAzMzE2NTM2XX0=
+eyJoaXN0b3J5IjpbMjEzODU3MjExNCw0MDMzMTY1MzZdfQ==
 -->
