@@ -13,7 +13,7 @@
 
 当使用默认导入时，你可以在 `import` 语句后面进行任意命名。比如 `import Banana from './Button.js'`，如此你能获得与默认导出一致的内容。相反，对于具名导入，导入和导出的名字必须一致。这也是称其为 **具名** 导入的原因！
 
-
+# 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAzMzE2NTM2XX0=
+eyJoaXN0b3J5IjpbODk2MjIyMDc1LDQwMzMxNjUzNl19
 -->
