@@ -149,10 +149,10 @@ function Item({ name, isPacked }) {
 2.  **触发** React 使用新数据渲染组件（重新渲染）。
 
 `useState`Hook 提供了这两个功能：
-3.  **State 变量** 用于保存渲染间的数据。
-4.  **State setter 函数** 更新变量并触发 React 再次渲染组件。
+1.  **State 变量** 用于保存渲染间的数据。
+2. **State setter 函数** 更新变量并触发 React 再次渲染组件。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzM2OTY3MjQsNzIzMTg5NzIzLC04MD
-M0MDgwOTAsOTUyNTI2ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0
-LDQwMzMxNjUzNl19
+eyJoaXN0b3J5IjpbLTE0NzQwMzU1MTAsLTE3MzM2OTY3MjQsNz
+IzMTg5NzIzLC04MDM0MDgwOTAsOTUyNTI2ODA5LDY0ODM1Mjc5
+MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
 -->
