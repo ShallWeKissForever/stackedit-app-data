@@ -138,11 +138,21 @@ function Item({ name, isPacked }) {
 -   编写纯函数需要一些练习，但它充分释放了 React 范式的能力。
 
 # state：组件的记忆
+`handleClick()` 事件处理函数正在更新局部变量 `index`。但存在两个原因使得变化不可见：
+
+1.  **局部变量无法在多次渲染中持久保存。** 当 React 再次渲染这个组件时，它会从头开始渲染——不会考虑之前对局部变量的任何更改。
+2.  **更改局部变量不会触发渲染。** React 没有意识到它需要使用新数据再次渲染组件。
+
+要使用新数据更新组件，需要做两件事：
+
+1.  **保留** 渲染之间的数据。
+2.  **触发** React 使用新数据渲染组件（重新渲染）。
+
 `useState`Hook 提供了这两个功能：
-1.  **State 变量** 用于保存渲染间的数据。
-2.  **State setter 函数** 更新变量并触发 React 再次渲染组件。
+3.  **State 变量** 用于保存渲染间的数据。
+4.  **State setter 函数** 更新变量并触发 React 再次渲染组件。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyOTg2OTQ4LDcyMzE4OTcyMywtODAzND
-A4MDkwLDk1MjUyNjgwOSw2NDgzNTI3OTMsMjEzODU3MjExNCw0
-MDMzMTY1MzZdfQ==
+eyJoaXN0b3J5IjpbLTE3MzM2OTY3MjQsNzIzMTg5NzIzLC04MD
+M0MDgwOTAsOTUyNTI2ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0
+LDQwMzMxNjUzNl19
 -->
