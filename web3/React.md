@@ -136,8 +136,13 @@ function Item({ name, isPacked }) {
 -   你不应该改变任何用于组件渲染的输入。这包括 props、state 和 context。通过 “设置” state来更新界面，而不要改变预先存在的对象。
 -   努力在你返回的 JSX 中表达你的组件逻辑。当你需要“改变事物”时，你通常希望在事件处理程序中进行。作为最后的手段，你可以使用 `useEffect`。
 -   编写纯函数需要一些练习，但它充分释放了 React 范式的能力。
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIzMTg5NzIzLC04MDM0MDgwOTAsOTUyNT
-I2ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
 
+# state：组件的记忆
+`useState`Hook 提供了这两个功能：
+1.  **State 变量** 用于保存渲染间的数据。
+2.  **State setter 函数** 更新变量并触发 React 再次渲染组件。
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNTMyOTg2OTQ4LDcyMzE4OTcyMywtODAzND
+A4MDkwLDk1MjUyNjgwOSw2NDgzNTI3OTMsMjEzODU3MjExNCw0
+MDMzMTY1MzZdfQ==
 -->
