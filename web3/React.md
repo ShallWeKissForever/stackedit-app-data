@@ -203,9 +203,26 @@ function Image() {
 ```
 -   **在初次渲染中，** React 将会为`<section>`、`<h1>` 和三个 `<img>` 标签 [创建 DOM 节点](https://developer.mozilla.org/docs/Web/API/Document/createElement)。
 -   **在一次重渲染过程中,** React 将计算它们的哪些属性（如果有的话）自上次渲染以来已更改。在下一步（提交阶段）之前，它不会对这些信息执行任何操作。
+## 步骤 3: React 把更改提交到 DOM 上[](https://zh-hans.react.dev/learn/render-and-commit#step-3-react-commits-changes-to-the-dom "Link for 步骤 3: React 把更改提交到 DOM 上 ")
 
+在渲染（调用）你的组件之后，React 将会修改 DOM。
+
+-   **对于初次渲染，** React 会使用 [`appendChild()`](https://developer.mozilla.org/docs/Web/API/Node/appendChild) DOM API 将其创建的所有 DOM 节点放在屏幕上。
+-   **对于重渲染，** React 将应用最少的必要操作（在渲染时计算！），以使得 DOM 与最新的渲染输出相互匹配。
+
+**React 仅在渲染之间存在差异时才会更改 DOM 节点。** 例如，有一个组件，它每秒使用从父组件传递下来的不同属性重新渲染一次。注意，你可以添加一些文本到 `<input>` 标签，更新它的 `value`，但是文本不会在组件重渲染时消失：
+```javascript
+export default function Clock({ time }) {
+  return (
+    <>
+      <h1>{time}</h1>
+      <input />
+    </>
+  );
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzg1NDM4NTUsLTE0NzQwMzU1MTAsLT
-E3MzM2OTY3MjQsNzIzMTg5NzIzLC04MDM0MDgwOTAsOTUyNTI2
-ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
+eyJoaXN0b3J5IjpbMTIyMjYxNDQ4OCwtMTQ3NDAzNTUxMCwtMT
+czMzY5NjcyNCw3MjMxODk3MjMsLTgwMzQwODA5MCw5NTI1MjY4
+MDksNjQ4MzUyNzkzLDIxMzg1NzIxMTQsNDAzMzE2NTM2XX0=
 -->
