@@ -201,9 +201,11 @@ function Image() {
   );
 }
 ```
+-   **在初次渲染中，** React 将会为`<section>`、`<h1>` 和三个 `<img>` 标签 [创建 DOM 节点](https://developer.mozilla.org/docs/Web/API/Document/createElement)。
+-   **在一次重渲染过程中,** React 将计算它们的哪些属性（如果有的话）自上次渲染以来已更改。在下一步（提交阶段）之前，它不会对这些信息执行任何操作。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMzODQ2NjYyLC0xNDc0MDM1NTEwLC0xNz
-MzNjk2NzI0LDcyMzE4OTcyMywtODAzNDA4MDkwLDk1MjUyNjgw
-OSw2NDgzNTI3OTMsMjEzODU3MjExNCw0MDMzMTY1MzZdfQ==
+eyJoaXN0b3J5IjpbLTIwMzg1NDM4NTUsLTE0NzQwMzU1MTAsLT
+E3MzM2OTY3MjQsNzIzMTg5NzIzLC04MDM0MDgwOTAsOTUyNTI2
+ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
 -->
