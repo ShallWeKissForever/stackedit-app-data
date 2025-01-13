@@ -172,8 +172,16 @@ root.render(<Image />);
 ### 状态更新时重新渲染[](https://zh-hans.react.dev/learn/render-and-commit#re-renders-when-state-updates "Link for 状态更新时重新渲染 ")
 
 一旦组件被初次渲染，你就可以通过使用 [`set` 函数](https://zh-hans.react.dev/reference/react/useState#setstate) 更新其状态来触发之后的渲染。更新组件的状态会自动将一次渲染送入队列。（你可以把这种情况想象成餐厅客人在第一次下单之后又点了茶、点心和各种东西，具体取决于他们的胃口。）
+## 步骤 2: React 渲染你的组件[](https://zh-hans.react.dev/learn/render-and-commit#step-2-react-renders-your-components "Link for 步骤 2: React 渲染你的组件 ")
+
+在你触发渲染后，React 会调用你的组件来确定要在屏幕上显示的内容。**“渲染中” 即 React 在调用你的组件。**
+
+-   **在进行初次渲染时,** React 会调用根组件。
+-   **对于后续的渲染,** React 会调用内部状态更新触发了渲染的函数组件。
+
+这个过程是递归的：如果更新后的组件会返回某个另外的组件，那么 React 接下来就会渲染 _那个_ 组件，而如果那个组件又返回了某个组件，那么 React 接下来就会渲染 _那个_ 组件，以此类推。这个过程会持续下去，直到没有更多的嵌套组件并且 React 确切知道哪些东西应该显示到屏幕上为止。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzg2NjcyMDIsLTE0NzQwMzU1MTAsLT
+eyJoaXN0b3J5IjpbLTE3MzIzODc5NzYsLTE0NzQwMzU1MTAsLT
 E3MzM2OTY3MjQsNzIzMTg5NzIzLC04MDM0MDgwOTAsOTUyNTI2
 ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
 -->
