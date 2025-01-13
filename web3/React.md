@@ -180,8 +180,30 @@ root.render(<Image />);
 -   **对于后续的渲染,** React 会调用内部状态更新触发了渲染的函数组件。
 
 这个过程是递归的：如果更新后的组件会返回某个另外的组件，那么 React 接下来就会渲染 _那个_ 组件，而如果那个组件又返回了某个组件，那么 React 接下来就会渲染 _那个_ 组件，以此类推。这个过程会持续下去，直到没有更多的嵌套组件并且 React 确切知道哪些东西应该显示到屏幕上为止。
+```javascript
+export default function Gallery() {
+  return (
+    <section>
+      <h1>鼓舞人心的雕塑</h1>
+      <Image />
+      <Image />
+      <Image />
+    </section>
+  );
+}
+
+function Image() {
+  return (
+    <img
+      src="https://i.imgur.com/ZF6s192.jpg"
+      alt="'Floralis Genérica' by Eduardo Catalano: a gigantic metallic flower sculpture with reflective petals"
+    />
+  );
+}
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzIzODc5NzYsLTE0NzQwMzU1MTAsLT
-E3MzM2OTY3MjQsNzIzMTg5NzIzLC04MDM0MDgwOTAsOTUyNTI2
-ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
+eyJoaXN0b3J5IjpbMzMzODQ2NjYyLC0xNDc0MDM1NTEwLC0xNz
+MzNjk2NzI0LDcyMzE4OTcyMywtODAzNDA4MDkwLDk1MjUyNjgw
+OSw2NDgzNTI3OTMsMjEzODU3MjExNCw0MDMzMTY1MzZdfQ==
 -->
