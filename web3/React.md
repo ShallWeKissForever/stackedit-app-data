@@ -149,10 +149,31 @@ function Item({ name, isPacked }) {
 2.  **触发** React 使用新数据渲染组件（重新渲染）。
 
 `useState`Hook 提供了这两个功能：
-1.  **State 变量** 用于保存渲染间的数据。
-2. **State setter 函数** 更新变量并触发 React 再次渲染组件。
+3.  **State 变量** 用于保存渲染间的数据。
+4. **State setter 函数** 更新变量并触发 React 再次渲染组件。
+# 渲染和提交
+## 步骤 1: 触发一次渲染[](https://zh-hans.react.dev/learn/render-and-commit#step-1-trigger-a-render "Link for 步骤 1: 触发一次渲染 ")
+
+有两种原因会导致组件的渲染:
+
+1.  组件的 **初次渲染。**
+2.  组件（或者其祖先之一）的 **状态发生了改变。**
+
+### 初次渲染[](https://zh-hans.react.dev/learn/render-and-commit#initial-render "Link for 初次渲染 ")
+
+当应用启动时，会触发初次渲染。框架和沙箱有时会隐藏这部分代码，但它是通过调用 [`createRoot`](https://zh-hans.react.dev/reference/react-dom/client/createRoot) 方法并传入目标 DOM 节点，然后用你的组件调用 `render` 函数完成的：
+```javascript
+import Image from './Image.js';
+import { createRoot } from 'react-dom/client';
+
+const root = createRoot(document.getElementById('root'))
+root.render(<Image />);
+```
+### 状态更新时重新渲染[](https://zh-hans.react.dev/learn/render-and-commit#re-renders-when-state-updates "Link for 状态更新时重新渲染 ")
+
+一旦组件被初次渲染，你就可以通过使用 [`set` 函数](https://zh-hans.react.dev/reference/react/useState#setstate) 更新其状态来触发之后的渲染。更新组件的状态会自动将一次渲染送入队列。（你可以把这种情况想象成餐厅客人在第一次下单之后又点了茶、点心和各种东西，具体取决于他们的胃口。）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzQwMzU1MTAsLTE3MzM2OTY3MjQsNz
-IzMTg5NzIzLC04MDM0MDgwOTAsOTUyNTI2ODA5LDY0ODM1Mjc5
-MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
+eyJoaXN0b3J5IjpbLTEzMzg2NjcyMDIsLTE0NzQwMzU1MTAsLT
+E3MzM2OTY3MjQsNzIzMTg5NzIzLC04MDM0MDgwOTAsOTUyNTI2
+ODA5LDY0ODM1Mjc5MywyMTM4NTcyMTE0LDQwMzMxNjUzNl19
 -->
