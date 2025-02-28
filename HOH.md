@@ -9,6 +9,13 @@
 3. 下架
 4. 租赁
 5. 还钱
+
+前端：
+6. 检测NFT
+7. 上架
+8. 下架
+9. 租赁
+10.还钱 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDI2MzkxMTNdfQ==
+eyJoaXN0b3J5IjpbMTE2MTI2NTY5N119
 -->
