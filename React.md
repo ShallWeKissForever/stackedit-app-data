@@ -226,9 +226,3 @@ export default function Clock({ time }) {
 ## 尾声：浏览器绘制[](https://zh-hans.react.dev/learn/render-and-commit#epilogue-browser-paint "Link for 尾声：浏览器绘制 ")
 
 在渲染完成并且 React 更新 DOM 之后，浏览器就会重新绘制屏幕。尽管这个过程被称为“浏览器渲染”（“browser rendering”），但我们还是将它称为“绘制”（“painting”），以避免在这些文档的其余部分中出现混淆。
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5OTA1NjY2MSwtOTk5MDU2NjYxLC0xND
-c0MDM1NTEwLC0xNzMzNjk2NzI0LDcyMzE4OTcyMywtODAzNDA4
-MDkwLDk1MjUyNjgwOSw2NDgzNTI3OTMsMjEzODU3MjExNCw0MD
-MzMTY1MzZdfQ==
--->

@@ -229,7 +229,7 @@
           </Routes>
         </BrowserRouter>
         ```
-        
+    
 2.  **Vue Router**（对于 Vue.js 项目）：
     
     -   Vue Router 提供手动配置和文件系统路由的功能。
@@ -1161,9 +1161,3 @@ export default function UserPage({ id }) {
 动态页面渲染是构建灵活、高效、实时更新的 Web 应用的重要技术。Next.js 提供了多种动态渲染方式，支持从服务器端到客户端的全面实现。在需要个性化、实时数据更新或处理复杂业务逻辑的场景中，动态页面渲染可以很好地满足需求，同时兼顾性能和 SEO。开发者可以根据具体需求选择 SSR 或 CSR，甚至结合静态生成（SSG）进行优化。
 
 [返回目录](#%E7%9B%AE%E5%BD%95)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNzkxNjAwMiwxMzUzODExNTYxLDE5Mj
-Q5NzIzOTksLTEwMjEzNzc4MTUsLTQyNDM0OTY4LC02NzQ5NzA3
-NDgsLTIzNDc0ODI0LDEwMDYwNjk2NTcsLTc4ODMyMDU5Nyw0OT
-I5ODA4OTEsLTc4ODMyMDU5N119
--->

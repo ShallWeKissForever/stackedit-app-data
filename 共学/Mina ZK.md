@@ -21,6 +21,3 @@ https://www.aurowallet.com/download/
 https://faucet.minaprotocol.com/ 
 
 🙋🏻‍♂️如果你有任何疑问或想要讨论课程中的内容，欢迎在群里与大家分享！
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MDEwOTM2MV19
--->

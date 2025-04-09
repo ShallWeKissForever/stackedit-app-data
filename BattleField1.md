@@ -99,6 +99,3 @@ https://api.xiaoheihe.cn/maxnews/app/share/detail/2132099
 -   Taschenpistole M1914 相当于突击兵的 Hammerless
 -   Repetierpistole M1912 支援兵专用武器 不推荐
 -   Mars Automatic 侦察兵专用武器 不推荐 高精度高弹速 用于中距离补枪 切枪快
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDYzNTk0NiwxNzU3NzczNDNdfQ==
--->

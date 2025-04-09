@@ -26,6 +26,3 @@ yarn create vite my-vue-app --template vue
 # pnpm
 pnpm create vite my-vue-app --template vue
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE5NzExMzQxXX0=
--->

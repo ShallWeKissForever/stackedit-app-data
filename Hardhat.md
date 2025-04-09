@@ -86,9 +86,3 @@ module.exports = {
 ```
 npx hardhat ignition deploy ./ignition/modules/Token.js --network sepolia
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU1NzQ3MjIwLDIwMTQ1MDQ1NDIsLTMwNj
-YxNzkxOSwtMzA2NjE3OTE5LDY1MDYwMzU5NywtMzY3NTIyMDAs
-MTA4OTk0NDQ0NiwtOTY2NzEwNjM5LC0xNTkxMTc2NDM4LC0xNz
-gzNjU2MTQ2LDEwNDg1NzE1MDddfQ==
--->
